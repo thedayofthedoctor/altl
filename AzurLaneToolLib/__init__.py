@@ -8,7 +8,7 @@ __init__.py - The core part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
 Version Date: 2022-02-15
-Version: 0.4.14
+Version: 0.5.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.

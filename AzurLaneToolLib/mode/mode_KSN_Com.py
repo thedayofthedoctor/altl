@@ -7,10 +7,10 @@ mode_KSN_Com.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-01-30
-Version: 0.4.13
+Version Date: 2022-02-15
+Version: 0.5.0
 Mode Create Date: 2020-10-07
-Mode Date: 2022-01-30
+Mode Date: 2022-02-15
 Mode Version: 1.0.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
@@ -35,24 +35,16 @@ def fun_ksen_nmco(vari_ksip: str) -> str:
     if vari_ksip not in list_ksnc + list_ksnm:
         vari_knrs = '查找内容无效，请检验输入内容，或检查更新！'
     else:
+        vari_knrs = ''
         for para_lsor in range(len(list_ksnm)):
             if vari_ksip == list_ksnm[para_lsor]:
                 vari_knrs = '舰船名：' + vari_ksip + '，对应代号:' + list_ksnc[para_lsor]
             elif vari_ksip == list_ksnc[para_lsor]:
                 vari_knrs = '舰船名：' + list_ksnm[para_lsor] + '，对应代号:' + vari_ksip
+            else:
+                vari_knrs = '查找内容无效，请检验输入内容，或检查更新！'
     return vari_knrs
 
-
-'''
-#define variable name
-  variable-name chinese
-  vari_ksip     变量-输入的查询量
-  list_ksnc     列表-舰船代码
-  list_ksnm     列表-舰船原名
-  vari_knrs     变量-查询结果
-  para_lsor     参量-列表顺序码
-  fun_jpkn_nmco 函数-舰船和谐名对照
-'''
 
 # define list
 list_ksnm = ['峰风', '神风', '朝风', '春风', '松风', '旗风', '追风', '夕凪', '睦月', '如月', '卯月', '水无月', '文月', '长月', '三日月', '吹雪', '白雪',

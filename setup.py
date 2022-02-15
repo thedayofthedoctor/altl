@@ -9,7 +9,7 @@ Author: Matt Belfast Brown
 E-mail: thedayofthedo@gmail.com
 Create Date: 2021-07-10
 Version Date: 2022-02-15
-Version: 0.4.14
+Version: 0.5.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -25,7 +25,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="AzurLaneToolLib",
-    version="0.4.14",
+    version="0.5.0",
     keywords=["pip", "azur_lane", "tool"],
     description="This tool is made of data collection in Wiki, Tools lib for Azur Lane which game powered by ManJiu Shanghai",
     long_description="The lib of Azur Lane Tools",

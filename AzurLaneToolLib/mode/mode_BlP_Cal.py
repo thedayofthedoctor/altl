@@ -7,11 +7,11 @@ mode_BlP_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-01-30
-Version: 0.4.13
+Version Date: 2022-02-15
+Version: 0.5.0
 Mode Create Date: 2020-05-02
-Mode Date: 2022-01-30
-Mode Version: 1.1.1
+Mode Date: 2022-02-15
+Mode Version: 1.1.2
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -40,6 +40,8 @@ def fun_cnbp_rqub(vari_plle):
         vari_bprb = 5
     elif vari_plle % 5 == 0:
         vari_bprb = int(-(vari_plle ** 3) / 375 + (vari_plle ** 2) / 5 - 2.9333 * vari_plle + 20)
+    else:
+        vari_bprb = 0
     return int(vari_bprb)
 
 
@@ -56,6 +58,8 @@ def fun_cnbp_rqup(flag_pltp, vari_plle):
         vari_bprq = fun_cnbp_rqub(vari_plle)
     elif flag_pltp == 'Decisive Plan':
         vari_bprq = int(fun_cnbp_rqub(vari_plle) * 1.5)
+    else:
+        vari_bprq = 0
     return vari_bprq
 
 
@@ -106,6 +110,8 @@ def fun_cnbp_tyfi(flag_pltp, vari_tfdl, vari_tyfg, vari_crtf):
             vari_bpty += list_fitd[i]
         vari_bpty += int((vari_crtf / 100) * list_fitt[vari_tfdl])
         vari_tbtf = 215 - vari_tyfg - vari_bpty
+    else:
+        vari_tbtf = 0
     return vari_tbtf, vari_bpty
 
 
@@ -130,7 +136,7 @@ def fun_cnbp_rbpt(flag_pltp, flag_pftf, vari_lede, vari_levn, vari_plde, vari_ep
     """
     if flag_pftf:
         vari_tbtf, vari_bpty = fun_cnbp_tyfi(flag_pltp, vari_tfdl, vari_tyfg, vari_crtf)
-    elif not flag_pftf:
+    else:
         vari_tbtf, vari_bpty = 0, 0
     vari_prbp, vari_tebp = fun_cnbp_rrcl(flag_pltp, vari_plde, vari_epbp, vari_lede, vari_levn)
     vari_prbt = vari_prbp + vari_tbtf

@@ -5,13 +5,13 @@
 THIS FILE IS PART OF AZUR LANE TOOL BY MATT BELFAST BROWN
 mode_FCS_Cal.py - The core mode of the Azur Lane Tool.
 
-Author:Matt Belfast Brown
-Create Date:2021-07-10
-Version Date:2022-01-30
-Version:0.4.13
-Mode Create Date:2020-05-27
-Mode Date:2022-01-22
-Mode Version:0.1.6
+Author: Matt Belfast Brown
+Create Date: 2021-07-10
+Version Date: 2022-02-15
+Version: 0.5.0
+Mode Create Date: 2020-05-27
+Mode Date: 2022-02-15
+Mode Version: 0.2.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
