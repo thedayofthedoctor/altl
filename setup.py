@@ -23,17 +23,27 @@ You should have received a copy of the GNU General Public License along with thi
 
 from setuptools import setup, find_packages
 
+with open("Descriptiption.md", 'r', encoding="utf-8") as dest_pimd:
+    long_description = dest_pimd.read()
+
 setup(
     name="AzurLaneToolLib",
-    version="0.5.1",
-    keywords=["pip", "azur_lane", "tool"],
-    description="This tool is made of data collection in Wiki, Tools lib for Azur Lane which game powered by ManJiu Shanghai",
-    long_description="The lib of Azur Lane Tools",
-    license="GPL-3.0 LICENSE",
+    version="0.5.1a2",
 
-    url="https://github.com/thedayofthedoctor/altl",
     author="Matt Belfast Brown",
     author_email="thedayofthedo@gmail.com",
+    license="GPL-3.0 LICENSE",
+
+    description="Tools lib for Azur Lane which game powered by ManJiu Shanghai",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    keywords=["pip", "azur_lane", "tool"],
+
+    url="https://github.com/thedayofthedoctor/altl",
+    project_urls={
+        "Documentation": "http://belfast.web3v.work/program/doc/altl/",
+    },
+
 
     packages=find_packages(),
     py_modules=['AzurLaneToolLib.__init__', 'AzurLaneToolLib.mode.mode_BlP_Cal', 'AzurLaneToolLib.mode.mode_EXP_Cal',
@@ -41,7 +51,13 @@ setup(
                 'AzurLaneToolLib.mode.mode_FCS_Cal', 'AzurLaneToolLib.mode.mode_FLE_Shi',
                 'AzurLAneToolLib.data.data_FLE_Shi'],
     include_package_data=True,
-    platforms="any",
     zip_safe=True,
-    install_requires=['lzstring']
+
+    classifiers=[
+            "Programming Language :: Python :: 3",
+            "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        ],
+    platforms="any",
+    install_requires=['lzstring'],
+    python_requires=">=3.7"
 )
