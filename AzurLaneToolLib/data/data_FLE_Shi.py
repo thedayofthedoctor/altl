@@ -13,7 +13,7 @@ data_FLE_Shi.py - The core data mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-17
+Version Date: 2022-02-20
 Version: 0.5.1
 Data Date: 2022-02-04
 
@@ -27,7 +27,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-ship_data = {
+dic_ship_data = {
     "10800060": {
         "nationality": 108,
         "type": 7,

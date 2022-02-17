@@ -8,7 +8,7 @@ setup.py - The core part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 E-mail: thedayofthedo@gmail.com
 Create Date: 2021-07-10
-Version Date: 2022-02-16
+Version Date: 2022-02-20
 Version: 0.5.1
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
@@ -31,14 +31,15 @@ setup(
     long_description="The lib of Azur Lane Tools",
     license="GPL-3.0 LICENSE",
 
-    url="https://gitee.com/tdotd/altl",
+    url="https://github.com/thedayofthedoctor/altl",
     author="Matt Belfast Brown",
     author_email="thedayofthedo@gmail.com",
 
     packages=find_packages(),
     py_modules=['AzurLaneToolLib.__init__', 'AzurLaneToolLib.mode.mode_BlP_Cal', 'AzurLaneToolLib.mode.mode_EXP_Cal',
                 'AzurLaneToolLib.mode.mode_KSN_Com', 'AzurLaneToolLib.mode.mode_CME_Cal',
-                'AzurLaneToolLib.mode.mode_FCS_Cal'],
+                'AzurLaneToolLib.mode.mode_FCS_Cal', 'AzurLaneToolLib.mode.mode_FLE_Shi',
+                'AzurLAneToolLib.data.data_FLE_Shi'],
     include_package_data=True,
     platforms="any",
     zip_safe=True,

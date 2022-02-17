@@ -20,9 +20,9 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-__title__ = 'AzurLaneToolLib.mode'
+__title__ = 'AzurLaneToolLib.data'
 __version__ = '0.5.1'
 __author__ = 'Matt Belfast Brown'
 __license__ = 'GPL-3.0'
 __copyright__ = 'Copyright (c) 2020-2022 Matt Belfast Brown'
-__all__ = ['mode_EXP_Cal', 'mode_BlP_Cal', 'mode_KSN_Com', 'mode_FCS_Cal', 'mode_CME_Cal', 'mode_FLE_Tol']
+__all__ = ['data_FLE_Shi']
