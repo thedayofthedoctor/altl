@@ -7,8 +7,8 @@ mode_CME_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-15
-Version: 0.5.0
+Version Date: 2022-02-16
+Version: 0.5.1
 Mode Create Date: 2019-08-10
 Mode Date: 2022-02-15
 Mode Version: 1.0.0
