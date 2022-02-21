@@ -6,7 +6,7 @@
 # Information 
 
 ## Proper nouns 
-Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦船）
+Kinetics Artefactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦船）
 動力学人工海上作戦機構·自律行動型伝承接続端子 -> 动力学人工海上作战机构·自律行动型历史连接端子 
 
 # Copyright Information 
@@ -36,7 +36,7 @@ Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
    
 ### Version:  
 > First Edition Time: 2021-07-10  
-> Last Revision Time: 2022-02-16  
+> Last Revision Time: 2022-02-22  
 > Version Number: 0.5.1  
 > 
 > **Version Update Log:**  

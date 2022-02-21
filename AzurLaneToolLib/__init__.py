@@ -7,7 +7,7 @@ __init__.py - The core part of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-20
+Version Date: 2022-02-22
 Version: 0.5.1
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
@@ -35,21 +35,24 @@ __version__ = '0.5.1'
 __author__ = 'Matt Belfast Brown'
 __license__ = 'GPL-3.0'
 __copyright__ = 'Copyright (c) 2020-2022 Matt Belfast Brown'
-__all__ = ['mode',
-           'mode_EXP_Cal', 'mode_BlP_Cal', 'mode_KSN_Com', 'mode_FCS_Cal', 'mode_CME_Cal']
+__all__ = ['mode', 'data',
+           'mode_EXP_Cal', 'mode_BlP_Cal', 'mode_KSN_Com', 'mode_FCS_Cal', 'mode_CME_Cal', 'data_FLE_Shi', 'mode_FLE_Tol']
 
 # function list
-fun_cexp_vrfu = mode_EXP_Cal.fun_cexp_vrfu
-fun_crex_cele = mode_EXP_Cal.fun_crex_cele
-fun_cnbp_rqup = mode_BlP_Cal.fun_cnbp_rqup
+fun_cnbp_rbpt = mode_BlP_Cal.fun_cnbp_rbpt
 fun_cnbp_rqub = mode_BlP_Cal.fun_cnbp_rqub
+fun_cnbp_rqup = mode_BlP_Cal.fun_cnbp_rqup
 fun_cnbp_rrcl = mode_BlP_Cal.fun_cnbp_rrcl
 fun_cnbp_tyfi = mode_BlP_Cal.fun_cnbp_tyfi
-fun_cnbp_rbpt = mode_BlP_Cal.fun_cnbp_rbpt
-fun_ksen_nmco = mode_KSN_Com.fun_ksen_nmco
 fun_berf_cmug = mode_CME_Cal.fun_berf_cmug
 fun_evdb_cmul = mode_CME_Cal.fun_evdb_cmul
+fun_cexp_vrfu = mode_EXP_Cal.fun_cexp_vrfu
+fun_crex_cele = mode_EXP_Cal.fun_crex_cele
+fun_bsdg_fuca = mode_FCS_Cal.fun_bsdg_fuca
+fun_kstp_scco = mode_FCS_Cal.fun_kstp_scco
+fun_sfks_fuca = mode_FCS_Cal.fun_sfks_fuca
 fun_maks_code = mode_FLE_Tol.fun_maks_code
+fun_ksen_nmco = mode_KSN_Com.fun_ksen_nmco
 
 # data list
 dic_ship_data = data_FLE_Shi.dic_ship_data
