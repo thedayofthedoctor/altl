@@ -7,7 +7,7 @@ mode_BlP_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-20
+Version Date: 2022-02-22
 Version: 0.5.1
 Mode Create Date: 2020-05-02
 Mode Date: 2022-02-15

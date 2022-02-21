@@ -22,13 +22,18 @@ Tools lib for Azur Lane which game powered by ManJiu Shanghai.
 > Address: **Room 313, Apartment No. 14, South District, South Campus, Northwest A&F University, No. 22, Xinong Road, Litai Street, Yangling District, Shaanxi Province, China**  
 > Address: ***中国陕西省杨凌区李台街道西农路22号西北农林科技大学南校区南区14号公寓313宿舍***  
 ## Version Information
+### 0.5.1
++ Edit `mode_FCS_Cal.py` for complete the most basic functions.
++ function `fun_bsdg_fuca`, `fun_kstp_scco`, `fun_sfks_fuca` is available.
++ It can calculate the fuel consumption of surface kansens.
 ### 0.5.1a2
 + Add new mode from Azur Lane Fleet  (**author: x94fujo6rpg**). 
 + Rewrite file `setup.py`. 
 + Try adding a document.
 ## Update Log
-| Release Version |     Status | Release Data | Update Info                 | 
-|----------------:|-----------:|:------------:|:----------------------------|
-|           0.5.1 |    working |  2022-02-20  | New mode and new algorithm. |
-|         0.5.1a2 |  available |  2022-02-18  | Test for 0.5.1 and new md.  |
-|          before |  available |    before    | before                      |
+| Release Version |    Status | Release Data | Update Info                 | 
+|----------------:|----------:|:------------:|:----------------------------|
+|           0.5.2 |   working |  2022-02-27  | Full mode for FCS_Cal.      |
+|           0.5.1 | available |  2022-02-22  | New mode and new algorithm. |
+|         0.5.1a2 | available |  2022-02-18  | Test for 0.5.1 and new md.  |
+|          before | available |    before    | before                      |

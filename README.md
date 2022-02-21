@@ -36,7 +36,7 @@ Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
    
 ### Version:  
 > First Edition Time: 2021-07-10  
-> Last Revision Time: 2022-02-16  
+> Last Revision Time: 2022-02-22  
 > Version Number: 0.5.1  
 > 
 > **Version Update Log:**  
