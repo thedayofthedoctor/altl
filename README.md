@@ -36,10 +36,14 @@ Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
    
 ### Version:  
 > First Edition Time: 2021-07-10  
-> Last Revision Time: 2022-02-22  
-> Version Number: 0.5.1  
+> Last Revision Time: 2022-03-26  
+> Version Number: 0.5.2  
 > 
 > **Version Update Log:**  
+>> #### 0.5.2
+>> - 完整完成模块`mode_FCS_Cal.py`
+>> - 修订了部分注释
+> 
 >> #### 0.5.1  
 >> + 更新ReadME文档  
 >> + 使用PyCharm进行代码体系更新

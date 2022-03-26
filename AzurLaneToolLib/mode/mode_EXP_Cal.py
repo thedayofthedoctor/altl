@@ -7,8 +7,8 @@ mode_EXP_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-22
-Version: 0.5.1
+Version Date: 2022-03-26
+Version: 0.5.2
 Mode Create Date: 2020-09-25
 Mode Date: 2022-02-15
 Mode Version: 1.0.2

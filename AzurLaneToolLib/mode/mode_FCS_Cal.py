@@ -7,11 +7,11 @@ mode_FCS_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-22
-Version: 0.5.1
+Version Date: 2022-03-26
+Version: 0.5.2
 Mode Create Date: 2020-05-27
-Mode Date: 2022-02-22
-Mode Version: 0.5.0
+Mode Date: 2022-03-26
+Mode Version: 0.6.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -22,17 +22,6 @@ This program is free software: you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-'''
-#define variable name
- variable-name chinese
- fun_sfks_fuca 函数-计算水面舰船油耗
- fun_smks_fuca 函数-计算潜艇油耗
- fun_bsdg_fuca 函数-计算基础满级油耗
- fun_smks_mfuc 函数-计算潜艇移动油耗
- vari_ksct     变量-舰船类别
- para_ksct     参数-舰船类别
- 
-'''
 
 
 # define function
