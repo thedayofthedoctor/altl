@@ -29,17 +29,22 @@ Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
     
 ### Contact Details 
 > E-mail: ***thedayofthedo@gmail.com*** or ***thedayofthedoctor@foxmail.com***   
-> TEL:\+86-15841486187 
+> TEL: ___+86-15841486187___ 
 >  
 > Address: **Room 313, Apartment No. 14, South District, South Campus, Northwest A&F University, No. 22, Xinong Road, Litai Street, Yangling District, Shaanxi Province, China**  
 > Address: ***中国陕西省杨凌区李台街道西农路22号西北农林科技大学南校区南区14号公寓313宿舍***  
    
 ### Version:  
 > First Edition Time: 2021-07-10  
-> Last Revision Time: 2022-03-26  
-> Version Number: 0.5.2  
+> Last Revision Time: 2022-03-27  
+> Version Number: 0.5.3  
 > 
 > **Version Update Log:**  
+> 
+>>#### 0.5.3
+>> + 添加并完善了注释结构
+>> + 修正了部分错误
+> 
 >> #### 0.5.2
 >> - 完整完成模块`mode_FCS_Cal.py`
 >> - 修订了部分注释

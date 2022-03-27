@@ -7,11 +7,11 @@ mode_FCS_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-03-26
-Version: 0.5.2
+Version Date: 2022-03-27
+Version: 0.5.3
 Mode Create Date: 2020-05-27
-Mode Date: 2022-03-26
-Mode Version: 0.6.0
+Mode Date: 2022-03-27
+Mode Version: 0.6.1
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.

@@ -24,12 +24,16 @@ Tools lib for Azur Lane which game powered by ManJiu Shanghai.
 ## Update Log
 | Release Version |    Status | Release Data | Update Info                   | 
 |----------------:|----------:|:------------:|:------------------------------|
-|           0.5.3 |   working |  2022-04-15  | Add and correct all comments. |
+|           0.5.4 |   working |  2022-04-27  | Full mode for FLE_Tol.        |
+|           0.5.3 | available |  2022-03-27  | Add and correct all comments. |
 |           0.5.2 | available |  2022-03-26  | Full mode for FCS_Cal.        |
 |           0.5.1 | available |  2022-02-22  | New mode and new algorithm.   |
 |         0.5.1a2 | available |  2022-02-18  | Test for 0.5.1 and new md.    |
 |          before | available |    before    | before                        |
 ## Version Information
+### 0.5.3
++ Add and correct all comments.
++ Fixed some errors.
 ### 0.5.2
 - Complete the full mode of `mode_FCS_Cal.py`.
 - Some comments have been modified.
