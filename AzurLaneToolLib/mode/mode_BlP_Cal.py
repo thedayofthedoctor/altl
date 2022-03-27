@@ -7,11 +7,11 @@ mode_BlP_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-22
-Version: 0.5.1
+Version Date: 2022-03-27
+Version: 0.5.3
 Mode Create Date: 2020-05-02
-Mode Date: 2022-02-15
-Mode Version: 1.1.2
+Mode Date: 2022-03-27
+Mode Version: 1.1.3
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -25,12 +25,12 @@ You should have received a copy of the GNU General Public License along with thi
 
 
 # define function list
-def fun_cnbp_rqub(vari_plle):
+def fun_cnbp_rqub(vari_plle: int) -> int:
     """
     此函数输入科研等级达到对应等级所需的蓝图数量。
     This function inputs the number of blueprints required to reach the corresponding level of scientific research.
-    :param vari_plle: 变量:科研等级 <Plan Level>
-    :return vari_bprb: 变量:升级所需基础蓝图数量 <Number of Basic Blueprint which Required for Upgrade>
+    :param vari_plle: 变量 科研等级 variable level of plan
+    :return: vari_bprb - 变量 升级所需基础蓝图数量 variable number of Basic Blueprint which Required for Upgrade
     """
     if 1 <= vari_plle <= 4 or 6 <= vari_plle <= 9 or 11 <= vari_plle <= 14:
         vari_bprb = 0.4 * vari_plle - 0.4 * (vari_plle % 5) + 2
@@ -45,14 +45,14 @@ def fun_cnbp_rqub(vari_plle):
     return int(vari_bprb)
 
 
-def fun_cnbp_rqup(flag_pltp, vari_plle):
+def fun_cnbp_rqup(flag_pltp: str, vari_plle: int) -> int:
     """
     此函数输入舰船科研类别与科研等级,输出升级所需蓝图数量.
     This function inputs the research type and research level of the ship, and outputs the number of blueprints required for the upgrade.
-    :param flag_pltp: 舰船科研类别 包括:'Top Solution'(最高方案)和'Decisive Plan'(决战方案)两个参数.
-    The ship research category includes: 'Top Solution' and 'Decisive Plan' parameters.
-    :param vari_plle: 变量:科研等级 <Plan Level>
-    :return vari_bprq:变量:升级所需蓝图数量 <Number of Blueprint which Required for Upgrade>
+    :param flag_pltp: 舰船科研类别 包括 'Top Solution'(最高方案)和'Decisive Plan'(决战方案)两个参数.
+    The ship research category includes  'Top Solution' and 'Decisive Plan' parameters.
+    :param vari_plle: 变量 科研等级 <Plan Level>
+    :return: vari_bprq - 变量 升级所需蓝图数量 <Number of Blueprint which Required for Upgrade>
     """
     if flag_pltp == 'Top Solution':
         vari_bprq = fun_cnbp_rqub(vari_plle)
@@ -63,7 +63,7 @@ def fun_cnbp_rqup(flag_pltp, vari_plle):
     return vari_bprq
 
 
-def fun_cnbp_rrcl(flag_pltp, vari_plde, vari_epbp, vari_lede, vari_levn):
+def fun_cnbp_rrcl(flag_pltp: str, vari_plde: int, vari_epbp: int, vari_lede: int, vari_levn: int) -> tuple[int, int]:
     """
     此函数输入下列五个参数输出非天运科研图纸需求数量以及已用图纸数量。
     This function inputs the following five parameters and outputs the required quantity of non-Tianyun scientific research drawings and the quantity of used blueprints.
@@ -73,7 +73,7 @@ def fun_cnbp_rrcl(flag_pltp, vari_plde, vari_epbp, vari_lede, vari_levn):
     :param vari_epbp: 本级已使用的蓝图数量. The number of blueprints used by this level.
     :param vari_lede: 需要升到的科研等级. The plan level which need.
     :param vari_levn: 目前的科研等级. The plan leve which had.
-    :return vari_prbp, vari_tebp:  科研图纸需求计算结果以及已用的总蓝图数.
+    :return:  vari_prbp, vari_tebp - 变量 科研图纸需求计算结果，变量 已用的总蓝图数.
     Calculation results of scientific blueprint requirements and the total number of blueprints used.
     """
     vari_tbpr = 0
@@ -87,7 +87,7 @@ def fun_cnbp_rrcl(flag_pltp, vari_plde, vari_epbp, vari_lede, vari_levn):
     return vari_prbp, vari_tebp
 
 
-def fun_cnbp_tyfi(flag_pltp, vari_tfdl, vari_tyfg, vari_crtf):
+def fun_cnbp_tyfi(flag_pltp: str, vari_tfdl: int, vari_tyfg: int, vari_crtf: int) -> tuple[int, int]:
     """
     此函数输入下列四个参数输出天运拟合总需蓝图数与天运拟合总用蓝图数.
     This function inputs the following four parameters and outputs the total number of blueprints required for the fitting of the sky and the total number of blueprints used for the fitting of the sky.
@@ -96,7 +96,7 @@ def fun_cnbp_tyfi(flag_pltp, vari_tfdl, vari_tyfg, vari_crtf):
     :param vari_tfdl: 天运拟合现有等级. Tianyun fits existing grades.
     :param vari_tyfg: 天运拟合未使用蓝图数量. Number of unused blueprints.
     :param vari_crtf: 天运拟合目前经验值. Tianyun fits the current experience value.
-    :return vari_tbtf, vari_bpty: 天运拟合总需蓝图数，天运拟合总用蓝图数
+    :return:vari_tbtf, vari_bpty - 天运拟合总需蓝图数，天运拟合总用蓝图数
     The total number of blueprints required for Tianyun fitting. The total number of blueprints required for Tianyun fitting.
     """
     vari_bpty = 0
@@ -115,7 +115,8 @@ def fun_cnbp_tyfi(flag_pltp, vari_tfdl, vari_tyfg, vari_crtf):
     return vari_tbtf, vari_bpty
 
 
-def fun_cnbp_rbpt(flag_pltp, flag_pftf, vari_lede, vari_levn, vari_plde, vari_epbp, vari_tfdl, vari_tyfg, vari_crtf):
+def fun_cnbp_rbpt(flag_pltp: str, flag_pftf: str, vari_lede: int, vari_levn: int, vari_plde: int, vari_epbp: int, vari_tfdl: int, vari_tyfg: int,
+                  vari_crtf: int) -> list:
     """
     此函数是集合函数，聚合上述函数内容的综合型函数.
     This function is an aggregate function, a comprehensive function that aggregates the contents of the above functions.
@@ -130,8 +131,9 @@ def fun_cnbp_rbpt(flag_pltp, flag_pftf, vari_lede, vari_levn, vari_plde, vari_ep
     :param vari_tfdl: 天运拟合现有等级. Tianyun fits existing grades.
     :param vari_tyfg: 天运拟合未使用蓝图数量. Number of unused blueprints.
     :param vari_crtf: 天运拟合目前经验值. Tianyun fits the current experience value.
-    :return [vari_prbt, vari_tbpt, vari_prbp, vari_tebp, vari_tbtf,
-            vari_bpty]: 列表，每项内容如下：[科研图纸需求含天运拟合,已用的总蓝图数含天运拟合,科研图纸需求计算结果,已用的总蓝图数,天运拟合总需蓝图数,天运拟合总用蓝图数]。
+    :return: [vari_prbt, vari_tbpt, vari_prbp, vari_tebp, vari_tbtf,
+            vari_bpty]
+            列表，每项内容如下：[科研图纸需求含天运拟合,已用的总蓝图数含天运拟合,科研图纸需求计算结果,已用的总蓝图数,天运拟合总需蓝图数,天运拟合总用蓝图数]。
             list, each of which is as follows: [Scientific research drawing requirements include Tianyun fitting, the total number of blueprints used includes Tianyun fitting, the calculation result of scientific research drawing requirements, the total number of blueprints used, the total number of blueprints required for Tianyun fitting, and the total number of Tianyun fitting number of blueprints].
     """
     if flag_pftf:

@@ -7,11 +7,11 @@ mode_EXP_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-22
-Version: 0.5.1
+Version Date: 2022-03-27
+Version: 0.5.3
 Mode Create Date: 2020-09-25
-Mode Date: 2022-02-15
-Mode Version: 1.0.2
+Mode Date: 2022-03-27
+Mode Version: 1.0.3
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -29,11 +29,11 @@ def fun_cexp_vrfu(flag_kstp: str, vari_leve: int) -> int:
     """
     此函数输入 <舰船类别> `flag_kstp` 与 <等级变量> `vari_leve` 得到该等级舰船 <升至下一级所需经验值> `vari_erfv`。
     数学运算公式为：int(1000 * vari_vara * vari_leve - 100 * vari_inva)
-    '''
     This function inputs <ship type> `flag_kstp` and <level variable> `vari_leve` to get the <experience value required to advance to the next level> `vari_erfv` for ships of this level.
     The mathematical formula is: int(1000 * vari_vara * vari_leve - 100 * vari_inva)
-    Translated by Google
-    '''
+    :param flag_kstp: 标志 舰船类别 flag type of Kansen plan
+    :param vari_leve: 变量 舰船等级 variable leve of Kansen
+    :return: vari_erfv - 变量 升至下一级所需经验值 variable experience value required to advance to the next level
     """
     if flag_kstp == 'Top Solution':
         if vari_leve == 0:
@@ -174,10 +174,12 @@ def fun_cexp_vrfu(flag_kstp: str, vari_leve: int) -> int:
 def fun_crex_cele(flag_kstp: str, vari_lede: int, vari_levn: int, vari_eexp: int) -> tuple[int, int]:
     """
     计算舰船升至某级所需经验值的函数，输入如下四个变量 <舰船类别> `flag_kstp` <舰船目前等级> `vari_lede` <舰船所需等级> `vari_levn` <舰船已有经验值> `vari_eexp` 输出两个变量 <舰船总需经验值> `vari_rexp` <舰船现有总经验值> `vari_teep` 。
-    '''
     A function to calculate the experience value required for a ship to upgrade to a certain level, enter the following four variables <ship type> `flag_kstp` <ship's current level> `vari_lede` <ship required level> `vari_levn` <ship has With experience> `vari_eexp` outputs two variables <ship total experience required> `vari_rexp` <ship existing total experience> `vari_teep`.
-    Translated by Google
-    '''
+    :param flag_kstp: 标志 舰船类别 flag type of Kansen
+    :param vari_lede: 变量 舰船目前等级 variable current level of Kansen
+    :param vari_eexp: 变量 舰船已有经验值 vairable experience of Kansen
+    :param vari_levn: 变量 舰船所需等级 variable required level of Kansen
+    :return: vari_rexp, vari_teep - 变量,变量 舰船总需经验值,舰船现有总经验值 variable, variable total experience required of Kansen, existing total experience of Kansen
     """
     vari_texp = 0
     vari_teep = 0

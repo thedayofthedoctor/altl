@@ -20,8 +20,23 @@ Tools lib for Azur Lane which game powered by ManJiu Shanghai.
 > TEL:\+86-15841486187 
 >  
 > Address: **Room 313, Apartment No. 14, South District, South Campus, Northwest A&F University, No. 22, Xinong Road, Litai Street, Yangling District, Shaanxi Province, China**  
-> Address: ***中国陕西省杨凌区李台街道西农路22号西北农林科技大学南校区南区14号公寓313宿舍***  
+> Address: ***中国陕西省杨凌区李台街道西农路22号西北农林科技大学南校区南区14号公寓313宿舍***
+## Update Log
+| Release Version |    Status | Release Data | Update Info                   | 
+|----------------:|----------:|:------------:|:------------------------------|
+|           0.5.4 |   working |  2022-04-27  | Full mode for FLE_Tol.        |
+|           0.5.3 | available |  2022-03-27  | Add and correct all comments. |
+|           0.5.2 | available |  2022-03-26  | Full mode for FCS_Cal.        |
+|           0.5.1 | available |  2022-02-22  | New mode and new algorithm.   |
+|         0.5.1a2 | available |  2022-02-18  | Test for 0.5.1 and new md.    |
+|          before | available |    before    | before                        |
 ## Version Information
+### 0.5.3
++ Add and correct all comments.
++ Fixed some errors.
+### 0.5.2
+- Complete the full mode of `mode_FCS_Cal.py`.
+- Some comments have been modified.
 ### 0.5.1
 + Edit `mode_FCS_Cal.py` for complete the most basic functions.
 + function `fun_bsdg_fuca`, `fun_kstp_scco`, `fun_sfks_fuca` is available.
@@ -30,10 +45,3 @@ Tools lib for Azur Lane which game powered by ManJiu Shanghai.
 + Add new mode from Azur Lane Fleet  (**author: x94fujo6rpg**). 
 + Rewrite file `setup.py`. 
 + Try adding a document.
-## Update Log
-| Release Version |    Status | Release Data | Update Info                 | 
-|----------------:|----------:|:------------:|:----------------------------|
-|           0.5.2 |   working |  2022-02-27  | Full mode for FCS_Cal.      |
-|           0.5.1 | available |  2022-02-22  | New mode and new algorithm. |
-|         0.5.1a2 | available |  2022-02-18  | Test for 0.5.1 and new md.  |
-|          before | available |    before    | before                      |

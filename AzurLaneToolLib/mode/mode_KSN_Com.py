@@ -7,11 +7,11 @@ mode_KSN_Com.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-22
-Version: 0.5.1
+Version Date: 2022-03-27
+Version: 0.5.3
 Mode Create Date: 2020-10-07
-Mode Date: 2022-02-15
-Mode Version: 1.0.0
+Mode Date: 2022-03-27
+Mode Version: 1.0.1
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -30,7 +30,7 @@ def fun_ksen_nmco(vari_ksip: str) -> str:
     此函数用于查询和谐的舰船名称包括日本及美国舰船.
     This function is used to query harmonious ship names including Japanese and American ships.
     :param vari_ksip: 查询内容. Query content.
-    :return vari_knrs: 查询结果. Search result.
+    :return: vari_knrs - 查询结果. Search result.
     """
     if vari_ksip not in list_ksnc + list_ksnm:
         vari_knrs = '查找内容无效，请检验输入内容，或检查更新！'

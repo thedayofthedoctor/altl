@@ -6,7 +6,7 @@
 # Information 
 
 ## Proper nouns 
-Kinetics Artefactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦船）
+Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦船）
 動力学人工海上作戦機構·自律行動型伝承接続端子 -> 动力学人工海上作战机构·自律行动型历史连接端子 
 
 # Copyright Information 
@@ -29,17 +29,26 @@ Kinetics Artefactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
     
 ### Contact Details 
 > E-mail: ***thedayofthedo@gmail.com*** or ***thedayofthedoctor@foxmail.com***   
-> TEL:\+86-15841486187 
+> TEL: ___+86-15841486187___ 
 >  
 > Address: **Room 313, Apartment No. 14, South District, South Campus, Northwest A&F University, No. 22, Xinong Road, Litai Street, Yangling District, Shaanxi Province, China**  
 > Address: ***中国陕西省杨凌区李台街道西农路22号西北农林科技大学南校区南区14号公寓313宿舍***  
    
 ### Version:  
 > First Edition Time: 2021-07-10  
-> Last Revision Time: 2022-02-22  
-> Version Number: 0.5.1  
+> Last Revision Time: 2022-03-27  
+> Version Number: 0.5.3  
 > 
 > **Version Update Log:**  
+> 
+>>#### 0.5.3
+>> + 添加并完善了注释结构
+>> + 修正了部分错误
+> 
+>> #### 0.5.2
+>> - 完整完成模块`mode_FCS_Cal.py`
+>> - 修订了部分注释
+> 
 >> #### 0.5.1  
 >> + 更新ReadME文档  
 >> + 使用PyCharm进行代码体系更新

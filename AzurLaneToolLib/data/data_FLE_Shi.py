@@ -13,8 +13,8 @@ data_FLE_Shi.py - The core data mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2021-07-10
-Version Date: 2022-02-22
-Version: 0.5.1
+Version Date: 2022-03-27
+Version: 0.5.3
 Data Date: 2022-02-04
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
