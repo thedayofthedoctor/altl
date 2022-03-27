@@ -24,7 +24,7 @@ Tools lib for Azur Lane which game powered by ManJiu Shanghai.
 ## Update Log
 | Release Version |   Status   | Release Data | Update Info                                  | 
 |----------------:|:----------:|:------------:|:---------------------------------------------|
-|           0.5.5 |  working   |  2022-05-01  | Upgrade the compilation environment to 3.10. |
+|           0.5.5 |  working   |  2022-05-03  | Upgrade the compilation environment to 3.10. |
 |           0.5.4 |  working   |  2022-04-27  | Full mode for FLE_Tol.                       |
 |           0.5.3 | available  |  2022-03-27  | Add and correct all comments.                |
 |           0.5.2 | available  |  2022-03-26  | Full mode for FCS_Cal.                       |
