@@ -6,17 +6,17 @@ THIS FILE IS PART OF AZUR LANE TOOL BY MATT BELFAST BROWN
 mode_EXP_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
-Create Date: 2021-07-10
-Version Date: 2022-09-13
-Version: 0.5.3.1
+Create Date: 2019-07-11
+Version Date: 2022-10-20
+Version: 0.6.0
 Mode Create Date: 2020-09-25
-Mode Date: 2022-03-27
-Mode Version: 1.0.3
+Mode Date: 2022-10-20
+Mode Version: 1.0.4
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
 
-Copyright (C) 2021-2022 Matt Belfast Brown
+Copyright (C) 2019-2022 Matt Belfast Brown
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
@@ -185,8 +185,11 @@ def fun_crex_cele(flag_kstp: str, vari_lede: int, vari_levn: int, vari_eexp: int
     vari_teep = 0
     for para_leve in range(vari_lede):
         vari_texp += fun_cexp_vrfu(flag_kstp, para_leve)
+        print(para_leve, vari_texp)
     for para_leex in range(vari_levn):
         vari_teep += fun_cexp_vrfu(flag_kstp, para_leex)
-    vari_teep += vari_eexp
-    vari_rexp = vari_texp - vari_teep
+        print(para_leex, vari_teep)
+    vari_texp += vari_eexp
+    print(vari_teep)
+    vari_rexp = vari_teep - vari_texp
     return vari_rexp, vari_teep

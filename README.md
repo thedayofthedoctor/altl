@@ -12,7 +12,7 @@ Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
 # Copyright Information 
 
 ## LICENSE 
-> Copyright (C) 2021 - 2022 Matt Belfast Brown  
+> Copyright (C) 2019 - 2022 Matt Belfast Brown  
 >   
 > This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  
 >    
@@ -35,14 +35,22 @@ Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
 > Address: ***中国陕西省杨凌区李台街道西农路22号西北农林科技大学南校区南区14号公寓313宿舍***  
    
 ### Version:  
-> First Edition Time: 2021-07-10  
-> Last Revision Time: 2022-03-27  
-> Version Number: 0.5.3.1
+
+> First Edition Time: 2019-07-11  
+> Last Revision Time: 2022-10-20  
+> Version Number: 0.6.0
 > 
 > **Version Update Log:**  
-> 
+>> #### 0.6.0
+>> + 重新规划了版本号
+>> + 重新修订了舰船数据
+>> + 新增数据文件`data_AZR_Lan.py`
+>> + 删除原数据`data_FLE_Shi.py`
+>> + 新增未完成模块`mode_SRS_Ptl.py`
+>
 >>#### 0.5.3.1
 >> + 添加了新舰船和谐名
+>
 >>#### 0.5.3
 >> + 添加并完善了注释结构
 >> + 修正了部分错误

@@ -6,12 +6,12 @@ THIS FILE IS PART OF AZUR LANE TOOL BY MATT BELFAST BROWN
 mode_KSN_Com.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
-Create Date: 2021-07-10
-Version Date: 2022-09-13
-Version: 0.5.3.1
+Create Date: 2019-07-11
+Version Date: 2022-10-20
+Version: 0.6.0
 Mode Create Date: 2020-10-07
-Mode Date: 2022-09-13
-Mode Version: 1.0.3
+Mode Date: 2022-10-20
+Mode Version: 1.1.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
