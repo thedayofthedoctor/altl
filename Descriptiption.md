@@ -1,7 +1,7 @@
 # AzurLaneToolLib
 
 Tools lib for Azur Lane which game powered by ManJiu Shanghai.
-
+Accelerating library iteration.
 ## Copyright Information
 
 ### LICENSE
@@ -46,16 +46,17 @@ Litai Street, Yangling District, Shaanxi Province, China**
 
 ## Update Log
 
-| Release Version |   Status   | Release Data | Update Info                                  | 
-|----------------:|:----------:|:------------:|:---------------------------------------------|
-|           0.6.1 |  working   |    future    | Upgrade the compilation environment to 3.10. |
-|           0.6.0 | available  |  2022-10-20  | Re planned version number                    |                                     |
-|         0.5.3.1 | available  |  2022-09-13  | Update new kansen name.                      |
-|           0.5.3 | available  |  2022-03-27  | Add and correct all comments.                |
-|           0.5.2 | available  |  2022-03-26  | Full mode for FCS_Cal.                       |
-|           0.5.1 | available  |  2022-02-22  | New mode and new algorithm.                  |
-|         0.5.1a2 | available  |  2022-02-18  | Test for 0.5.1 and new md.                   |
-|          before | available  |    before    | before                                       |
+| Release Version |  Status   | Release Data | Update Info                                  | 
+|----------------:|:---------:|:------------:|:---------------------------------------------|
+|           0.7.0 |  working  |    future    | Upgrade the compilation environment to 3.10. |
+|           0.6.1 |  working  |  2023-03-10  | Finish ` mode_ SRS_ Ptl.py`.                 |
+|           0.6.0 | available |  2022-10-20  | Re planned version number                    |                                     |
+|         0.5.3.1 | available |  2022-09-13  | Update new kansen name.                      |
+|           0.5.3 | available |  2022-03-27  | Add and correct all comments.                |
+|           0.5.2 | available |  2022-03-26  | Full mode for FCS_Cal.                       |
+|           0.5.1 | available |  2022-02-22  | New mode and new algorithm.                  |
+|         0.5.1a2 | available |  2022-02-18  | Test for 0.5.1 and new md.                   |
+|          before | available |    before    | before                                       |
 
 ## Version Update Information
 

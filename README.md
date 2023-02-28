@@ -4,7 +4,7 @@
 
 
 # Information 
-
+Accelerating library iteration.
 ## Proper nouns 
 Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦船）
 動力学人工海上作戦機構·自律行動型伝承接続端子 -> 动力学人工海上作战机构·自律行动型历史连接端子 
@@ -20,7 +20,7 @@ Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
 >   
 > You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/> .  
 
-## Author and Version  
+## Author  
 ### Author Information  
 > Author: ***Matt Belfast Brown*** or *Matt Brown* or *M.B.B.*（ **Name in English** ）  
 >> Also be called ***The Day of The Doctor*** ( **Network Nickname** )  
@@ -34,12 +34,23 @@ Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
 > Address: **Room 313, Apartment No. 14, South District, South Campus, Northwest A&F University, No. 22, Xinong Road, Litai Street, Yangling District, Shaanxi Province, China**  
 > Address: ***中国陕西省杨凌区李台街道西农路22号西北农林科技大学南校区南区14号公寓313宿舍***  
    
+## Update Log
 ### Version:  
 
-> First Edition Time: 2019-07-11  
-> Last Revision Time: 2022-10-20  
-> Version Number: 0.6.0
-> 
+| Release Version |  Status   | Release Data | Update Info                                  | 
+|----------------:|:---------:|:------------:|:---------------------------------------------|
+|           0.6.0 | available |  2022-10-20  | Re planned version number                    |                                     |
+|         0.5.3.1 | available |  2022-09-13  | Update new kansen name.                      |
+|           0.5.3 | available |  2022-03-27  | Add and correct all comments.                |
+|           0.5.2 | available |  2022-03-26  | Full mode for FCS_Cal.                       |
+|           0.5.1 | available |  2022-02-22  | New mode and new algorithm.                  |
+|         0.5.1a2 | available |  2022-02-18  | Test for 0.5.1 and new md.                   |
+
+
+**First Edition Time: 2019-07-11**  
+**Last Revision Time: 2022-10-20**  
+**Version Number: 0.6.0**
+
 > **Version Update Log:**  
 >> #### 0.6.0
 >> + 重新规划了版本号
@@ -63,3 +74,8 @@ Kinetics Artifactual Navy Self-fegulative En-lore Node -> KANSEN -> 舰船（艦
 >> + 更新ReadME文档  
 >> + 使用PyCharm进行代码体系更新
 >> + 从AzurLaneFleetTool(**author: x94fujo6rpg**)改编新增`mode_FLE_Tol.py`
+> 
+>> #### 0.5.1a2
+>> + Add new mode from Azur Lane Fleet  (**author: x94fujo6rpg**).
+>> + Rewrite file `setup.py`.
+>> + Try adding a document.
