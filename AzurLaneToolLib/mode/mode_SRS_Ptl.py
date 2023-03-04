@@ -15,10 +15,10 @@ mode_SRS_Pyl.py - The core code part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-04
-Version: 0.6.1β2
+Version: 0.6.1β3
 Mode Create Date: 2020-10-13
 Mode Date: 2023-03-04
-Mode Version: 0.1.0α1
+Mode Version: 0.2.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -117,7 +117,12 @@ class KsenKeyGen:
 
 class FitCal:
     # define internal implementation of class
-    def __init__(self, meta_data):
+    def __init__(self, meta_data: list):
+        """
+         This implementation sets the main parameters of the Kansen plan.
+        此实现方案对舰船计划部分主要参数进行设定。
+        :param meta_data: 列表 元数据 - list main data
+        """
         self.list_valu = [[0, 0, 0, 0, 0] for _ in range(29)]  # 总消耗, 总产出, 预期收益, 出现概率, 消耗时间
         self.list_rank = [i for i in range(29)]  # 冒泡排序列表
         self.valu_kfir = [0, 0, 0, 1.5, 1]  # 第一阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
@@ -160,10 +165,6 @@ class FitCal:
         self.aver_mdcb = 0  # 日均魔方消耗参数值
         # self.aver_ssrg = 0  #
         # self.aver_urga = 0  #
-
-    def iir_outp_base(self, list_outp):
-        if self.numb_urse < self.numb_neur:
-            self.time_urne = (self.numb_neur - self.numb_urse) / list_outp[1][4]
 
     def iir_cuin_calc(self, meta_sval, meta_data, curr_stag: int):
         """收益计算"""
@@ -447,6 +448,8 @@ class FitCal:
         else:
             para_pont += 0
             para_dvsr *= 1
+        vari_evsc += para_pont
+        vari_evsc /= para_dvsr
         self.numb_urse = 0  # 重置彩剩余参数
         self.valu_mtrl = 0  # 重置物资参数值
         self.valu_mdcb = 0  # 重置魔方参数值
@@ -471,6 +474,46 @@ def fun_gain_valu(lsit_keyg):
     meta_valu[3] += 0.5 * lsit_keyg[3]
     meta_valu[4] += 2 * lsit_keyg[4]
     return meta_valu
+
+
+def fun_anel_algr(vari_plpe: int, main_data: list):
+    numb_anal = int(main_data[46][1])
+    ksen_base = KsenKeyGen(main_data)
+    plan_base = FitCal(main_data)
+    fita_base = plan_base.iir_calu_baio(vari_plpe, ksen_base, main_data)
+    numb_time = 0
+    while numb_time <= 200:
+        numb_time += 1
+        ksen_bnew = KsenKeyGen(main_data)
+        ksen_bnew.iic_gnew_rand()
+        plan_fita = FitCal(main_data)
+        pont_fita = plan_fita.iir_calu_baio(vari_plpe, ksen_bnew, main_data)
+        if pont_fita > fita_base:
+            fita_base = pont_fita
+            ksen_base = copy.deepcopy(ksen_bnew)
+        else:
+            continue
+    time_numb = 0
+    while time_numb < numb_anal:
+        ksen_bnow = copy.deepcopy(ksen_base)
+        for numb_rang in range(5):
+            ksen_keys = copy.deepcopy(ksen_bnow)
+            ksen_keys.iic_cont_itrt()
+            fita_pnew = FitCal(main_data)
+            fita_pont = fita_pnew.iir_calu_baio(vari_plpe, ksen_keys, main_data)
+            if fita_pont > fita_base:
+                ksen_bnow = copy.deepcopy(ksen_keys)
+                ksen_base = copy.deepcopy(ksen_keys)
+                fita_pnxt = FitCal(main_data)
+                fita_base = fita_pnxt.iir_calu_baio(vari_plpe, ksen_base, main_data)
+            else:
+                numb_rand = (5 - numb_rang) * 10
+                numb_rand = random.randint(0, numb_rand)
+                if fita_pont + numb_rand > fita_base:
+                    ksen_bnow = copy.deepcopy(ksen_keys)
+                else:
+                    continue
+    return ksen_base
 
 
 def fun_mkmt_data():

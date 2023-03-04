@@ -8,7 +8,7 @@ __init__.py - The core part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-04
-Version: 0.6.1β2
+Version: 0.6.1β3
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -32,12 +32,16 @@ import AzurLaneToolLib.mode.mode_SRS_Ptl as mode_SRS_Ptl
 
 # information list
 __title__ = "AzurLaneToolLib"
-__version__ = "0.6.1β2"
+__version__ = "0.6.1β3"
 __author__ = "Matt Belfast Brown"
 __license__ = "GPL-3.0"
 __copyright__ = "Copyright (c) 2020-2023 Matt Belfast Brown"
 __all__ = ["mode", "data", "mode_EXP_Cal", "mode_BlP_Cal", "mode_KSN_Com", "mode_FCS_Cal", "mode_CME_Cal",
            "data_AZR_Lan", "mode_FLE_Tol", "mode_SRS_Ptl"]
+
+# class list
+FitCal = mode_SRS_Ptl.FitCal
+KsenKeyGen = mode_SRS_Ptl.KsenKeyGen
 
 # function list
 fun_cnbp_rbpt = mode_BlP_Cal.fun_cnbp_rbpt
@@ -54,6 +58,9 @@ fun_kstp_scco = mode_FCS_Cal.fun_kstp_scco
 fun_sfks_fuca = mode_FCS_Cal.fun_sfks_fuca
 fun_maks_code = mode_FLE_Tol.fun_maks_code
 fun_ksen_nmco = mode_KSN_Com.fun_ksen_nmco
+fun_gain_valu = mode_SRS_Ptl.fun_gain_valu
+fun_anel_algr = mode_SRS_Ptl.fun_anel_algr
+fun_mkmt_data = mode_SRS_Ptl.fun_mkmt_data
 
 # data list
 dic_ksen_data = data_AZR_Lan.dic_ksen_data

@@ -9,7 +9,7 @@ Author: Matt Belfast Brown
 E-mail: thedayofthedo@gmail.com
 Create Date: 2019-07-11
 Version Date: 2023-03-04
-Version: 0.6.1β2
+Version: 0.6.1β3
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -28,7 +28,7 @@ with open("Descriptiption.md", 'r', encoding="utf-8") as dest_pimd:
 
 setup(
     name="AzurLaneToolLib",
-    version="0.6.1b2",
+    version="0.6.1b3",
 
     author="Matt Belfast Brown",
     author_email="thedayofthedo@gmail.com",
@@ -46,10 +46,11 @@ setup(
     },
 
     packages=find_packages(),
-    py_modules=['AzurLaneToolLib.__init__', 'AzurLaneToolLib.mode.mode_BlP_Cal', 'AzurLaneToolLib.mode.mode_EXP_Cal',
+    py_modules=['AzurLaneToolLib.__init__', 'AzurLaneToolLib.mode.__init__', 'AzurLaneToolLib.data.__init__',
+                'AzurLaneToolLib.mode.mode_BlP_Cal', 'AzurLaneToolLib.mode.mode_EXP_Cal',
                 'AzurLaneToolLib.mode.mode_KSN_Com', 'AzurLaneToolLib.mode.mode_CME_Cal',
                 'AzurLaneToolLib.mode.mode_FCS_Cal', 'AzurLaneToolLib.mode.mode_FLE_Tol',
-                'AzurLAneToolLib.data.data_AZR_Lan'],
+                'AzurlaneToolLib.mode.mode_SRS_Ptl', 'AzurLAneToolLib.data.data_AZR_Lan'],
     include_package_data=True,
     zip_safe=True,
 
