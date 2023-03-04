@@ -15,10 +15,10 @@ mode_SRS_Pyl.py - The core code part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-04
-Version: 0.6.1β5
+Version: 0.6.1r1
 Mode Create Date: 2020-10-13
 Mode Date: 2023-03-04
-Mode Version: 1.0.0α1
+Mode Version: 1.0.0β1
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -124,7 +124,6 @@ class FitCal:
         :param dic_polc_rstr: 列表 元数据 - list main data
         """
         self.list_valu = [[0, 0, 0, 0, 0] for _ in range(29)]  # 总消耗, 总产出, 预期收益, 出现概率, 消耗时间
-        self.list_rank = [i for i in range(29)]  # 冒泡排序列表
         self.valu_kfir = [0, 0, 0, 1.5, 1]  # 第一阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
         self.valu_ksec = [0, 0, 0, 1.5, 1]  # 第二阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
         self.valu_kthi = [0, 0, 0, 1.5, 1]  # 第三阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
@@ -168,6 +167,7 @@ class FitCal:
         self.valu_mtrl = meta_sval[0] / 200  # 物资
         self.valu_mdcb = meta_sval[1] * 10  # 魔方
         self.valu_mtut = meta_sval[2] * 0.6  # 心智
+        list_rank = [i for i in range(29)]  # 冒泡排序列表
         if curr_stag == 0:
             self.valu_kssr = 1000
             self.valu_ksur = self.valu_kssr * meta_sval[3]
@@ -216,11 +216,11 @@ class FitCal:
             for numb_sort in range(29):  # 利用冒泡排序方法排列
                 for para_sort in range(28):
                     if self.list_valu[para_sort][2] < self.list_valu[para_sort + 1][2]:
-                        self.list_rank[para_sort] = para_sort + 1
-                        self.list_rank[para_sort + 1] = para_sort
+                        list_rank[para_sort] = para_sort + 1
+                        list_rank[para_sort + 1] = para_sort
                     else:
                         continue
-            dic_daly_fopa = self.iir_earn_fore(dic_polc_rstr)
+            dic_daly_fopa = self.iir_earn_fore(list_rank, dic_polc_rstr)
             para_itcp = dic_daly_fopa["cope_rafp"]  # 循环的性价比
             para_numb += 1
             if para_itcp == self.para_incp:
@@ -229,22 +229,23 @@ class FitCal:
                 self.para_incp = para_itcp
         while True:
             self.valu_filt += 1
-            dic_daly_fopr = self.iir_earn_fore(dic_polc_rstr)
+            dic_daly_fopr = self.iir_earn_fore(list_rank, dic_polc_rstr)
             para_itcr = dic_daly_fopr["cope_rafp"]  # 迭代循环的性价比
             if self.para_incp < para_itcr:
                 dic_daly_fopp = copy.deepcopy(dic_daly_fopr)
                 continue
             else:
                 self.valu_filt -= 1
-                dic_daly_fopp = self.iir_earn_fore(dic_polc_rstr)
+                dic_daly_fopp = self.iir_earn_fore(list_rank, dic_polc_rstr)
                 break
         para_filt = self.valu_filt
         self.valu_filt = 5
         dic_eoop_pday = dic_daly_fopp
         dic_eoop_pday["lift_coma"] = para_filt  # 迭代循环使用的过滤参量
+        dic_eoop_pday["rank_list"] = list_rank
         return dic_eoop_pday
 
-    def iir_earn_fore(self, dic_polc_rstr):
+    def iir_earn_fore(self, list_rank, dic_polc_rstr):
         """收益预测"""
         vari_plpr = dic_polc_rstr["prob_plpr"]  # 预计出现前期科研项目比例
         list_sefr = []  # 被选取的频率列表
@@ -255,7 +256,7 @@ class FitCal:
         vari_toco = 0  # 总消耗量
         vari_toop = 0  # 总产出量
         for numb_balc in range(29):
-            numb_rank = self.list_rank[numb_balc]  # 循环数
+            numb_rank = list_rank[numb_balc]  # 循环数
             para_basp = self.list_valu[numb_rank][3]  # p0 基础概率
             para_prtp = para_basp / vari_proc
             if 8 <= numb_rank <= 15:
@@ -283,7 +284,7 @@ class FitCal:
         para_toco = para_toop = para_coti = 0
         list_dldt = [0, 0, 0, 0, 0, 0, 0]  # 物资, 魔方, 间隔, 金图, 彩图, 彩装, 心智
         for para_rank in range(29):
-            rank_numb = self.list_rank[para_rank]  # 项目序号
+            rank_numb = list_rank[para_rank]  # 项目序号
             para_pobs = list_sefr[para_rank][0]  # 选取的概率
             if para_rank <= self.valu_filt:
                 para_poss = (para_pobs / para_esra) * para_fisp
@@ -497,6 +498,7 @@ def fun_anel_algr(vari_plpe: int, dic_polc_rstr: dict):
                 ksen_base = copy.deepcopy(ksen_keys)
                 fita_pnxt = FitCal(dic_polc_rstr)
                 fita_base = fita_pnxt.iir_calu_baio(vari_plpe, ksen_base, dic_polc_rstr)
+
             else:
                 numb_rand = (5 - numb_rang) * 10
                 numb_rand = random.randint(0, numb_rand)
@@ -504,6 +506,7 @@ def fun_anel_algr(vari_plpe: int, dic_polc_rstr: dict):
                     ksen_bnow = copy.deepcopy(ksen_keys)
                 else:
                     continue
+            time_numb += 1
     return ksen_base
 
 

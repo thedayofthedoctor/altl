@@ -12,7 +12,7 @@ mode_FLE_Tol.py - The core mode of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-04
-Version: 0.6.1β5
+Version: 0.6.1γ1
 Mode Create Date: 2022-10-18
 Mode Date: 2023-03-04
 Mode Version: 0.0.2

@@ -8,7 +8,7 @@ __init__.py - The core part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-04
-Version: 0.6.1β5
+Version: 0.6.1γ1
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -32,7 +32,7 @@ import AzurLaneToolLib.mode.mode_SRS_Ptl as mode_SRS_Ptl
 
 # information list
 __title__ = "AzurLaneToolLib"
-__version__ = "0.6.1β5"
+__version__ = "0.6.1r1"
 __author__ = "Matt Belfast Brown"
 __license__ = "GPL-3.0"
 __copyright__ = "Copyright (c) 2020-2023 Matt Belfast Brown"
