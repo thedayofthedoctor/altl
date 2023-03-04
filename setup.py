@@ -28,7 +28,7 @@ with open("Descriptiption.md", 'r', encoding="utf-8") as dest_pimd:
 
 setup(
     name="AzurLaneToolLib",
-    version="0.6.1r5",
+    version="0.6.1r1",
 
     author="Matt Belfast Brown",
     author_email="thedayofthedo@gmail.com",
