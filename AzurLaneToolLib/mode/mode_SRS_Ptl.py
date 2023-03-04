@@ -7,23 +7,23 @@ It is from `azurlanekeyan` product by tianqianzhiyang, Licensed under the Mulan 
 Copyright (C) 2022 tianqianzhiyang
 Author: tianqianzhiyang
 bilibili: https://space.bilibili.com/337285187/
-url: https://gitee.com/iamtianqianzhiyang/azurelanekeyan
+git_url: https://gitee.com/iamtianqianzhiyang/azurelanekeyan
 
 THIS FILE IS PART OF AZUR LANE TOOL BY MATT BELFAST BROWN
 mode_SRS_Pyl.py - The core code part of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2022-10-20
-Version: 0.6.0
+Version Date: 2023-03-04
+Version: 0.6.1β1
 Mode Create Date: 2020-10-13
-Mode Date: 2022-10-20
-Mode Version: 0.0.3
+Mode Date: 2023-03-04
+Mode Version: 0.1.0α1
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
 
-Copyright (C) 2019-2022 Matt Belfast Brown
+Copyright (C) 2019-2023 Matt Belfast Brown
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU keygral Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU keygral Public License for more details.
