@@ -15,10 +15,10 @@ mode_SRS_Pyl.py - The core code part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-04
-Version: 0.6.1β3
+Version: 0.6.1β5
 Mode Create Date: 2020-10-13
 Mode Date: 2023-03-04
-Mode Version: 0.2.0
+Mode Version: 1.0.0α1
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -37,11 +37,11 @@ import random
 # define class
 class KsenKeyGen:
     # define internal implementation of class
-    def __init__(self, meta_data: list):
+    def __init__(self, dic_polc_rstr: list):
         """
         This implementation sets the main parameters of the Kansen plan.
         此实现方案对舰船计划部分主要参数进行设定。
-        :param meta_data: 列表 元数据 - list main data
+        :param dic_polc_rstr: 列表 元数据 - list main data
         """
         self.keyg_kfir = [0, 0, 0, 0, 0]  # 省物资0，省魔方1，缺心智2，金：彩3，彩：装备4
         self.keyg_ksec = [0, 0, 0, 0, 0]  # 省物资5，省魔方6，缺心智7，金：彩8，彩：装备9
@@ -52,11 +52,11 @@ class KsenKeyGen:
         self.mdcb_work = 1  # 心智魔方
         self.mtut_work = 1  # 心智单元
         self.list_cnvt = []
-        if meta_data[31][1] == 0:
+        if dic_polc_rstr["mthd_mtrl"] == 0:
             self.mtrl_work = 0
-        if meta_data[32][1] == 0:
+        if dic_polc_rstr["mthd_mdcb"] == 0:
             self.mdcb_work = 0
-        if meta_data[36][1] == 0:
+        if dic_polc_rstr["mthd_mtut"] == 0:
             self.mtut_work = 0
         for para_numb in range(15):
             if para_numb == 0 or para_numb == 5 or para_numb == 10:
@@ -117,35 +117,34 @@ class KsenKeyGen:
 
 class FitCal:
     # define internal implementation of class
-    def __init__(self, meta_data: list):
+    def __init__(self, dic_polc_rstr: dict):
         """
          This implementation sets the main parameters of the Kansen plan.
         此实现方案对舰船计划部分主要参数进行设定。
-        :param meta_data: 列表 元数据 - list main data
+        :param dic_polc_rstr: 列表 元数据 - list main data
         """
         self.list_valu = [[0, 0, 0, 0, 0] for _ in range(29)]  # 总消耗, 总产出, 预期收益, 出现概率, 消耗时间
         self.list_rank = [i for i in range(29)]  # 冒泡排序列表
         self.valu_kfir = [0, 0, 0, 1.5, 1]  # 第一阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
         self.valu_ksec = [0, 0, 0, 1.5, 1]  # 第二阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
         self.valu_kthi = [0, 0, 0, 1.5, 1]  # 第三阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
-        self.mthd_mtrl = meta_data[31][1]  # 物资限制方式
-        self.numb_mtrl = meta_data[31][2]  # 物资限制数目
-        self.mthd_mdcb = meta_data[32][1]  # 魔方限制方式
-        self.numb_mdcb = meta_data[32][2]  # 魔方限制数目
-        self.mthd_kssr = meta_data[33][1]  # 金船限制方式
-        self.numb_kssr = meta_data[33][2]  # 金船限制数目
-        self.mthd_ksur = meta_data[34][1]  # 彩船限制方式
-        self.numb_ksur = meta_data[34][2]  # 彩船限制数目
-        self.mthd_tcur = meta_data[35][1]  # 彩装限制方式
-        self.numb_tcur = meta_data[35][2]  # 彩装限制数目
-        self.mthd_mtut = meta_data[36][1]  # 心智限制方式
-        self.numb_mtut = meta_data[36][2]  # 心智限制方式
-        self.numb_hssr = meta_data[38][1]  # 金船已有数目
-        self.numb_hpur = meta_data[39][1]  # 彩船已有数目
+        self.mthd_mtrl = dic_polc_rstr["mthd_mtrl"]  # 物资限制方式
+        self.numb_mtrl = dic_polc_rstr["numb_mtrl"]  # 物资限制数目
+        self.mthd_mdcb = dic_polc_rstr["mthd_mdcb"]  # 魔方限制方式
+        self.numb_mdcb = dic_polc_rstr["numb_mdcb"]  # 魔方限制数目
+        self.mthd_kssr = dic_polc_rstr["mthd_kssr"]  # 金船限制方式
+        self.numb_kssr = dic_polc_rstr["numb_kssr"]  # 金船限制数目
+        self.mthd_ksur = dic_polc_rstr["mthd_ksur"]  # 彩船限制方式
+        self.numb_ksur = dic_polc_rstr["numb_ksur"]  # 彩船限制数目
+        self.mthd_tcur = dic_polc_rstr["mthd_tcur"]  # 彩装限制方式
+        self.numb_tcur = dic_polc_rstr["numb_tcur"]  # 彩装限制数目
+        self.mthd_mtut = dic_polc_rstr["mthd_mtut"]  # 心智限制方式
+        self.numb_mtut = dic_polc_rstr["numb_mtut"]  # 心智限制方式
+        self.numb_hssr = dic_polc_rstr["numb_hssr"]  # 金船已有数目
+        self.numb_hpur = dic_polc_rstr["numb_hpur"]  # 彩船已有数目
         self.list_pssr = [1524, 1524]  # 金船各期科研总需值
         self.list_prur = [1456, 1456]  # 彩船各期科研总需值
         self.para_incp = 0  # 初始性价比
-        # self.para_cope = 0  # 方案性价比
         self.valu_tfir = 1500  # 时间参数值1
         self.valu_tsec = 0  # 时间参数值2
         self.incm_pint = 100  # 方案评分
@@ -163,10 +162,8 @@ class FitCal:
         self.time_urne = 0  # 彩船所需时长
         self.aver_mtrl = 0  # 日均物资消耗参数值
         self.aver_mdcb = 0  # 日均魔方消耗参数值
-        # self.aver_ssrg = 0  #
-        # self.aver_urga = 0  #
 
-    def iir_cuin_calc(self, meta_sval, meta_data, curr_stag: int):
+    def iir_cuin_calc(self, meta_sval, dic_polc_rstr, curr_stag: int):
         """收益计算"""
         self.valu_mtrl = meta_sval[0] / 200  # 物资
         self.valu_mdcb = meta_sval[1] * 10  # 魔方
@@ -179,18 +176,18 @@ class FitCal:
             self.valu_kssr = 0
             self.valu_ksur = self.valu_kssr * meta_sval[3]
             self.valu_tcur = self.valu_ksur * meta_sval[4]
-            para_medi = meta_data[10][2]
-            meta_data[10][2] = 0
-            meta_data[14][2] += para_medi
-            para_medi = meta_data[11][2]
-            meta_data[11][2] = 0
-            meta_data[15][2] += para_medi
-            para_medi = meta_data[12][2]
-            meta_data[12][2] = 0
-            meta_data[16][2] += para_medi
-            para_medi = meta_data[13][2]
-            meta_data[13][2] = 0
-            meta_data[17][2] += para_medi
+            para_medi = list_pldt[8]["prob_ablt"]
+            list_pldt[8]["prob_ablt"] = 0
+            list_pldt[12]["prob_ablt"] += para_medi
+            para_medi = list_pldt[9]["prob_ablt"]
+            list_pldt[9]["prob_ablt"] = 0
+            list_pldt[13]["prob_ablt"] += para_medi
+            para_medi = list_pldt[10]["prob_ablt"]
+            list_pldt[10]["prob_ablt"] = 0
+            list_pldt[14]["prob_ablt"] += para_medi
+            para_medi = list_pldt[11]["prob_ablt"]
+            list_pldt[11]["prob_ablt"] = 0
+            list_pldt[15]["prob_ablt"] += para_medi
         elif curr_stag == 2:
             self.valu_kssr = 0
             self.valu_ksur = 1
@@ -202,21 +199,20 @@ class FitCal:
         para_numb = 0  # 用于循环的参数
         while para_numb <= 20:
             for numb_time in range(29):
-                rows_numb = numb_time + 2  # 行号
                 totl_cost = totl_outp = 0  # 总消耗量 = 总产出量
-                totl_cost += meta_data[rows_numb][1] * self.valu_tfir + self.valu_tsec  # 时间消耗
-                totl_cost += meta_data[rows_numb][3] * self.valu_mtrl  # 物资消耗
-                totl_cost += meta_data[rows_numb][4] * self.valu_mdcb  # 魔方消耗
-                totl_outp += meta_data[rows_numb][5] * self.valu_kssr  # 金船图纸产出
-                totl_outp += meta_data[rows_numb][6] * self.valu_ksur  # 彩船图纸产出
-                totl_outp += meta_data[rows_numb][7] * self.valu_tcur  # 彩装蓝图产出
-                totl_outp += meta_data[rows_numb][8] * self.valu_mtut  # 心智单元产出
-                totl_outp *= meta_data[rows_numb][1]
+                totl_cost += list_pldt[numb_time]["cost_time"] * self.valu_tfir + self.valu_tsec  # 时间消耗
+                totl_cost += list_pldt[numb_time]["cost_mtul"] * self.valu_mtrl  # 物资消耗
+                totl_cost += list_pldt[numb_time]["cost_mdcb"] * self.valu_mdcb  # 魔方消耗
+                totl_outp += list_pldt[numb_time]["gain_kssr"] * self.valu_kssr  # 金船图纸产出
+                totl_outp += list_pldt[numb_time]["gain_knur"] * self.valu_ksur  # 彩船图纸产出
+                totl_outp += list_pldt[numb_time]["gain_tcur"] * self.valu_tcur  # 彩装蓝图产出
+                totl_outp += list_pldt[numb_time]["gain_mtut"] * self.valu_mtut  # 心智单元产出
+                totl_outp *= list_pldt[numb_time]["cost_time"]
                 self.list_valu[numb_time][0] = totl_cost
                 self.list_valu[numb_time][1] = totl_outp
                 self.list_valu[numb_time][2] = totl_outp - self.para_incp * totl_cost
-                self.list_valu[numb_time][3] = meta_data[rows_numb][2]
-                self.list_valu[numb_time][4] = meta_data[rows_numb][1]
+                self.list_valu[numb_time][3] = list_pldt[numb_time]["prob_ablt"]
+                self.list_valu[numb_time][4] = list_pldt[numb_time]["cost_time"]
             for numb_sort in range(29):  # 利用冒泡排序方法排列
                 for para_sort in range(28):
                     if self.list_valu[para_sort][2] < self.list_valu[para_sort + 1][2]:
@@ -224,10 +220,8 @@ class FitCal:
                         self.list_rank[para_sort + 1] = para_sort
                     else:
                         continue
-            dic_daly_fopa = self.iir_earn_fore(meta_data)
+            dic_daly_fopa = self.iir_earn_fore(dic_polc_rstr)
             para_itcp = dic_daly_fopa["cope_rafp"]  # 循环的性价比
-            # para_dtcp = dic_daly_fopp["dlcp_rafp"]  # 循环的日性价比
-            # list_foda = dic_daly_fopp["daly_foda"]  # 循环的日预测数据
             para_numb += 1
             if para_itcp == self.para_incp:
                 break
@@ -235,16 +229,14 @@ class FitCal:
                 self.para_incp = para_itcp
         while True:
             self.valu_filt += 1
-            dic_daly_fopr = self.iir_earn_fore(meta_data)
+            dic_daly_fopr = self.iir_earn_fore(dic_polc_rstr)
             para_itcr = dic_daly_fopr["cope_rafp"]  # 迭代循环的性价比
-            # para_dtcr = dic_daly_fopr["dlcp_rafp"]  # 迭代循环的日性价比
-            # list_fodr = dic_daly_fopr["daly_foda"]  # 迭代循环的日预测数据
             if self.para_incp < para_itcr:
                 dic_daly_fopp = copy.deepcopy(dic_daly_fopr)
                 continue
             else:
                 self.valu_filt -= 1
-                dic_daly_fopp = self.iir_earn_fore(meta_data)
+                dic_daly_fopp = self.iir_earn_fore(dic_polc_rstr)
                 break
         para_filt = self.valu_filt
         self.valu_filt = 5
@@ -252,9 +244,9 @@ class FitCal:
         dic_eoop_pday["lift_coma"] = para_filt  # 迭代循环使用的过滤参量
         return dic_eoop_pday
 
-    def iir_earn_fore(self, meta_data):
+    def iir_earn_fore(self, dic_polc_rstr):
         """收益预测"""
-        vari_plpr = meta_data[37][1]
+        vari_plpr = dic_polc_rstr["prob_plpr"]  # 预计出现前期科研项目比例
         list_sefr = []  # 被选取的频率列表
         vari_proc = 1  # 剩余目标出现概率
         vari_rsra = 1  # 可供选择的比例5
@@ -292,7 +284,6 @@ class FitCal:
         list_dldt = [0, 0, 0, 0, 0, 0, 0]  # 物资, 魔方, 间隔, 金图, 彩图, 彩装, 心智
         for para_rank in range(29):
             rank_numb = self.list_rank[para_rank]  # 项目序号
-            rows_numb = rank_numb + 2
             para_pobs = list_sefr[para_rank][0]  # 选取的概率
             if para_rank <= self.valu_filt:
                 para_poss = (para_pobs / para_esra) * para_fisp
@@ -302,13 +293,13 @@ class FitCal:
             para_toco += self.list_valu[rank_numb][0] * para_poss  # 当前总消耗
             para_toop += self.list_valu[rank_numb][1] * para_poss  # 当前总产出
             para_coti += self.list_valu[rank_numb][4] * para_poss  # 当前总耗时
-            list_dldt[0] += meta_data[rows_numb][1] * para_poss  # 日常消耗时间
-            list_dldt[1] += meta_data[rows_numb][3] * para_poss  # 日常物资消耗
-            list_dldt[2] += meta_data[rows_numb][4] * para_poss  # 日常魔方消耗
-            list_dldt[3] += meta_data[rows_numb][1] * meta_data[rows_numb][5] * para_poss  # 每日金图产出
-            list_dldt[4] += meta_data[rows_numb][1] * meta_data[rows_numb][6] * para_poss  # 每日彩图产出
-            list_dldt[5] += meta_data[rows_numb][1] * meta_data[rows_numb][7] * para_poss  # 每日彩装产出
-            list_dldt[6] += meta_data[rows_numb][1] * meta_data[rows_numb][8] * para_poss  # 每日心智产出
+            list_dldt[0] += list_pldt[rank_numb]["cost_time"] * para_poss  # 日常消耗时间
+            list_dldt[1] += list_pldt[rank_numb]["cost_mtul"] * para_poss  # 日常物资消耗
+            list_dldt[2] += list_pldt[rank_numb]["cost_mdcb"] * para_poss  # 日常魔方消耗
+            list_dldt[3] += list_pldt[rank_numb]["cost_time"] * list_pldt[rank_numb]["gain_kssr"] * para_poss  # 每日金图产出
+            list_dldt[4] += list_pldt[rank_numb]["cost_time"] * list_pldt[rank_numb]["gain_knur"] * para_poss  # 每日彩图产出
+            list_dldt[5] += list_pldt[rank_numb]["cost_time"] * list_pldt[rank_numb]["gain_tcur"] * para_poss  # 每日彩装产出
+            list_dldt[6] += list_pldt[rank_numb]["cost_time"] * list_pldt[rank_numb]["gain_mtut"] * para_poss  # 每日心智产出
         para_reti = 24 / para_coti  # 每日科研的次数
         for numb_dldt in range(7):
             if numb_dldt == 2:
@@ -319,14 +310,14 @@ class FitCal:
         dic_daly_fore = {"cope_rafp": para_incp, "dlcp_rafp": para_dlcp, "daly_foda": list_dldt}
         return dic_daly_fore
 
-    def iir_calu_baio(self, vari_plpe, clas_gene, meta_data):
+    def iir_calu_baio(self, vari_plpe, clas_gene, dic_polc_rstr):
         """基础收益产出"""
         self.valu_kfir = fun_gain_valu(clas_gene.keyg_kfir)  # 第一阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
         self.valu_ksec = fun_gain_valu(clas_gene.keyg_ksec)  # 第二阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
         self.valu_kthi = fun_gain_valu(clas_gene.keyg_kthi)  # 第三阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
-        dic_oupt_firs = self.iir_cuin_calc(self.valu_kfir, meta_data, 0)  # 第一阶段基础产出
-        dic_oupt_seco = self.iir_cuin_calc(self.valu_ksec, meta_data, 1)  # 第二阶段基础产出
-        dic_oupt_thir = self.iir_cuin_calc(self.valu_kthi, meta_data, 2)  # 第三阶段基础产出
+        dic_oupt_firs = self.iir_cuin_calc(self.valu_kfir, dic_polc_rstr, 0)  # 第一阶段基础产出
+        dic_oupt_seco = self.iir_cuin_calc(self.valu_ksec, dic_polc_rstr, 1)  # 第二阶段基础产出
+        dic_oupt_thir = self.iir_cuin_calc(self.valu_kthi, dic_polc_rstr, 2)  # 第三阶段基础产出
         list_oupt = [dic_oupt_firs, dic_oupt_seco, dic_oupt_thir]  # 基础产出列表
         para_evsc = self.iir_fitn_calc(vari_plpe, list_oupt)  # 基础收益产出计算
         return para_evsc
@@ -476,18 +467,18 @@ def fun_gain_valu(lsit_keyg):
     return meta_valu
 
 
-def fun_anel_algr(vari_plpe: int, main_data: list):
-    numb_anal = int(main_data[46][1])
-    ksen_base = KsenKeyGen(main_data)
-    plan_base = FitCal(main_data)
-    fita_base = plan_base.iir_calu_baio(vari_plpe, ksen_base, main_data)
+def fun_anel_algr(vari_plpe: int, dic_polc_rstr: dict):
+    numb_anal = int(dic_polc_rstr["time_algr"])
+    ksen_base = KsenKeyGen(dic_polc_rstr)
+    plan_base = FitCal(dic_polc_rstr)
+    fita_base = plan_base.iir_calu_baio(vari_plpe, ksen_base, dic_polc_rstr)
     numb_time = 0
     while numb_time <= 200:
         numb_time += 1
-        ksen_bnew = KsenKeyGen(main_data)
+        ksen_bnew = KsenKeyGen(dic_polc_rstr)
         ksen_bnew.iic_gnew_rand()
-        plan_fita = FitCal(main_data)
-        pont_fita = plan_fita.iir_calu_baio(vari_plpe, ksen_bnew, main_data)
+        plan_fita = FitCal(dic_polc_rstr)
+        pont_fita = plan_fita.iir_calu_baio(vari_plpe, ksen_bnew, dic_polc_rstr)
         if pont_fita > fita_base:
             fita_base = pont_fita
             ksen_base = copy.deepcopy(ksen_bnew)
@@ -499,13 +490,13 @@ def fun_anel_algr(vari_plpe: int, main_data: list):
         for numb_rang in range(5):
             ksen_keys = copy.deepcopy(ksen_bnow)
             ksen_keys.iic_cont_itrt()
-            fita_pnew = FitCal(main_data)
-            fita_pont = fita_pnew.iir_calu_baio(vari_plpe, ksen_keys, main_data)
+            fita_pnew = FitCal(dic_polc_rstr)
+            fita_pont = fita_pnew.iir_calu_baio(vari_plpe, ksen_keys, dic_polc_rstr)
             if fita_pont > fita_base:
                 ksen_bnow = copy.deepcopy(ksen_keys)
                 ksen_base = copy.deepcopy(ksen_keys)
-                fita_pnxt = FitCal(main_data)
-                fita_base = fita_pnxt.iir_calu_baio(vari_plpe, ksen_base, main_data)
+                fita_pnxt = FitCal(dic_polc_rstr)
+                fita_base = fita_pnxt.iir_calu_baio(vari_plpe, ksen_base, dic_polc_rstr)
             else:
                 numb_rand = (5 - numb_rang) * 10
                 numb_rand = random.randint(0, numb_rand)
@@ -529,3 +520,66 @@ def fun_mkmt_data():
         list_mida.append(list_mdda)
         numb_rows += 1
     return list_mida
+
+
+# define list
+list_pldt = [
+    {"plan_name": "魔方解析1h", "cost_time": 1, "prob_ablt": 0.116201789, "cost_mtul": 0, "cost_mdcb": 3,
+     "gain_kssr": 2.77, "gain_knur": 0.66, "gain_tcur": 0, "gain_mtut": 40},
+    {"plan_name": "魔方解析2h", "cost_time": 2, "prob_ablt": 0.072676553, "cost_mtul": 0, "cost_mdcb": 6,
+     "gain_kssr": 2.03, "gain_knur": 0.48, "gain_tcur": 0, "gain_mtut": 30.16},
+    {"plan_name": "魔方解析4h", "cost_time": 4, "prob_ablt": 0.011272179, "cost_mtul": 0, "cost_mdcb": 10,
+     "gain_kssr": 1.39, "gain_knur": 0.33, "gain_tcur": 0, "gain_mtut": 20.77},
+    {"plan_name": "心智补全0.5h", "cost_time": 0.5, "prob_ablt": 0.000857392, "cost_mtul": 8000,
+     "cost_mdcb": 3, "gain_kssr": 9.88, "gain_knur": 2.34, "gain_tcur": 0, "gain_mtut": 194.49},
+    {"plan_name": "舰装解析1h", "cost_time": 1, "prob_ablt": 0.092421779, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.042, "gain_mtut": 0},
+    {"plan_name": "舰装解析2h", "cost_time": 2, "prob_ablt": 0.044886976, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.042, "gain_mtut": 0},
+    {"plan_name": "舰装解析4h", "cost_time": 4, "prob_ablt": 0.022998271, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.042, "gain_mtut": 0},
+    {"plan_name": "舰装解析0.5h", "cost_time": 0.5, "prob_ablt": 0.009002613, "cost_mtul": 5000,
+     "cost_mdcb": 0, "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.693, "gain_mtut": 0},
+    {"plan_name": "金船定向2.5h", "cost_time": 2.5, "prob_ablt": 0.071602948, "cost_mtul": 3000,
+     "cost_mdcb": 0, "gain_kssr": 0.91, "gain_knur": 0, "gain_tcur": 0.016, "gain_mtut": 0},
+    {"plan_name": "金船定向5h", "cost_time": 5, "prob_ablt": 0.045716093, "cost_mtul": 5000, "cost_mdcb": 0,
+     "gain_kssr": 0.75, "gain_knur": 0, "gain_tcur": 0.011, "gain_mtut": 0},
+    {"plan_name": "金船定向8h", "cost_time": 8, "prob_ablt": 0.007370892, "cost_mtul": 8000, "cost_mdcb": 0,
+     "gain_kssr": 0.75, "gain_knur": 0, "gain_tcur": 0.011, "gain_mtut": 0},
+    {"plan_name": "金船定向0.5h", "cost_time": 0.5, "prob_ablt": 0.001076647, "cost_mtul": 5000,
+     "cost_mdcb": 5, "gain_kssr": 18, "gain_knur": 0, "gain_tcur": 0.25, "gain_mtut": 0},
+    {"plan_name": "彩船定向2.5h", "cost_time": 2.5, "prob_ablt": 0.047735299, "cost_mtul": 3000,
+     "cost_mdcb": 0, "gain_kssr": 0, "gain_knur": 0.61, "gain_tcur": 0.016, "gain_mtut": 0},
+    {"plan_name": "彩船定向5h", "cost_time": 5, "prob_ablt": 0.030477395, "cost_mtul": 5000, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0.51, "gain_tcur": 0.011, "gain_mtut": 0},
+    {"plan_name": "彩船定向8h", "cost_time": 8, "prob_ablt": 0.004913928, "cost_mtul": 8000, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0.51, "gain_tcur": 0.011, "gain_mtut": 0},
+    {"plan_name": "彩船定向0.5h", "cost_time": 0.5, "prob_ablt": 0.000717765, "cost_mtul": 5000,
+     "cost_mdcb": 5, "gain_kssr": 0, "gain_knur": 11.77, "gain_tcur": 0.25, "gain_mtut": 0},
+    {"plan_name": "资金募集1.5h", "cost_time": 1.5, "prob_ablt": 0.099810477, "cost_mtul": 1500,
+     "cost_mdcb": 0, "gain_kssr": 0.55, "gain_knur": 0.13, "gain_tcur": 0.018, "gain_mtut": 0},
+    {"plan_name": "资金募集2.5h", "cost_time": 2.5, "prob_ablt": 0.065086115, "cost_mtul": 3000,
+     "cost_mdcb": 0, "gain_kssr": 0.46, "gain_knur": 0.11, "gain_tcur": 0.014, "gain_mtut": 0},
+    {"plan_name": "资金募集4h", "cost_time": 4, "prob_ablt": 0.050838283, "cost_mtul": 6000, "cost_mdcb": 0,
+     "gain_kssr": 0.52, "gain_knur": 0.12, "gain_tcur": 0.03, "gain_mtut": 0},
+    {"plan_name": "蓝试验品募集2h", "cost_time": 2, "prob_ablt": 0.018257399, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.019, "gain_mtut": 0},
+    {"plan_name": "紫试验品募集2h", "cost_time": 2, "prob_ablt": 0.01349131, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.025, "gain_mtut": 0},
+    {"plan_name": "紫数据收集4h", "cost_time": 4, "prob_ablt": 0.017122616, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0.2, "gain_knur": 0.05, "gain_tcur": 0.015, "gain_mtut": 0},
+    {"plan_name": "金数据收集4h", "cost_time": 4, "prob_ablt": 0.007161742, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0.2, "gain_knur": 0.05, "gain_tcur": 0.018, "gain_mtut": 0},
+    {"plan_name": "基础研究6h", "cost_time": 6, "prob_ablt": 0.047913064, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.011, "gain_mtut": 0},
+    {"plan_name": "基础研究8h", "cost_time": 8, "prob_ablt": 0.034220015, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0.06, "gain_knur": 0.014, "gain_tcur": 0.011, "gain_mtut": 0},
+    {"plan_name": "基础研究12h", "cost_time": 12, "prob_ablt": 0.008573917, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0.06, "gain_knur": 0.014, "gain_tcur": 0.011, "gain_mtut": 0},
+    {"plan_name": "研究委托3h", "cost_time": 3, "prob_ablt": 0.017450442, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.012, "gain_mtut": 0},
+    {"plan_name": "研究委托4h", "cost_time": 4, "prob_ablt": 0.013920006, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.012, "gain_mtut": 0},
+    {"plan_name": "研究委托6h", "cost_time": 6, "prob_ablt": 0.008876526, "cost_mtul": 0, "cost_mdcb": 0,
+     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.012, "gain_mtut": 0}
+]
