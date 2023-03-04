@@ -41,8 +41,8 @@ Litai Street, Yangling District, Shaanxi Province, China**
 ## Version Information
 
 > First Edition Time: 2019-07-11  
-> Last Revision Time: 2023-03-04  
-> Version Number: 0.6.1β1
+> Last Revision Time: 2022-10-20  
+> Version Number: 0.6.0
 
 ## Update Log
 

@@ -7,13 +7,13 @@ __init__.py - The core part of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2023-03-04
-Version: 0.6.1β1
+Version Date: 2022-09-13
+Version: 0.6.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
 
-Copyright (C) 2019-2023 Matt Belfast Brown
+Copyright (C) 2019-2022 Matt Belfast Brown
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
@@ -32,10 +32,10 @@ import AzurLaneToolLib.mode.mode_SRS_Ptl as mode_SRS_Ptl
 
 # information list
 __title__ = "AzurLaneToolLib"
-__version__ = "0.6.1β1"
+__version__ = "0.6.0"
 __author__ = "Matt Belfast Brown"
 __license__ = "GPL-3.0"
-__copyright__ = "Copyright (c) 2020-2023 Matt Belfast Brown"
+__copyright__ = "Copyright (c) 2020-2022 Matt Belfast Brown"
 __all__ = ["mode", "data", "mode_EXP_Cal", "mode_BlP_Cal", "mode_KSN_Com", "mode_FCS_Cal", "mode_CME_Cal",
            "data_AZR_Lan", "mode_FLE_Tol", "mode_SRS_Ptl"]
 
