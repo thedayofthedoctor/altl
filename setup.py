@@ -42,6 +42,7 @@ setup(
     url="https://github.com/thedayofthedoctor/altl",
     project_urls={
         "Documentation": "http://belfast.web3v.work/program/doc/altl/",
+        "Bug Tracker": "https://github.com/pypa/sampleproject/issues",
     },
 
     packages=find_packages(),
