@@ -319,11 +319,11 @@ class FitCal:
         dic_daly_fore = {"cope_rafp": para_incp, "dlcp_rafp": para_dlcp, "daly_foda": list_dldt}
         return dic_daly_fore
 
-    def iir_calu_baio(self, vari_plpe, ClassGene, meta_data):
+    def iir_calu_baio(self, vari_plpe, clas_gene, meta_data):
         """基础收益产出"""
-        self.valu_kfir = fun_gain_valu(ClassGene.keyg_kfir)  # 第一阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
-        self.valu_ksec = fun_gain_valu(ClassGene.keyg_ksec)  # 第二阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
-        self.valu_kthi = fun_gain_valu(ClassGene.keyg_kthi)  # 第三阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
+        self.valu_kfir = fun_gain_valu(clas_gene.keyg_kfir)  # 第一阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
+        self.valu_ksec = fun_gain_valu(clas_gene.keyg_ksec)  # 第二阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
+        self.valu_kthi = fun_gain_valu(clas_gene.keyg_kthi)  # 第三阶段参数 - 物资, 魔方, 心智, 金:彩, 彩:装备
         dic_oupt_firs = self.iir_cuin_calc(self.valu_kfir, meta_data, 0)  # 第一阶段基础产出
         dic_oupt_seco = self.iir_cuin_calc(self.valu_ksec, meta_data, 1)  # 第二阶段基础产出
         dic_oupt_thir = self.iir_cuin_calc(self.valu_kthi, meta_data, 2)  # 第三阶段基础产出
@@ -368,14 +368,62 @@ class FitCal:
         self.aver_mtrl = self.valu_mtrl / 365
         self.aver_mdcb = self.valu_mtrl / 365
         self.time_urne += self.time_ssrn
-        return True
 
     def iir_fitn_calc(self, vari_plpe, meta_data, list_oupt):
         """适应度计算"""
         self.numb_tcur *= 50
         vari_evsc = self.incm_pint
-        flag_gaol = self.iir_gain_opls(vari_plpe, list_oupt)
-
+        self.iir_gain_opls(vari_plpe, list_oupt)
+        para_pont = 0
+        para_dvsr = 1
+        if self.mthd_kssr == 2:  # 金船图纸限制
+            para_pont += (365 - self.time_ssrn)
+            para_dvsr *= 1
+        elif self.mthd_kssr == 1:
+            para_pont += 0
+            if self.numb_kssr <= self.time_ssrn:
+                para_dvsr *= (1 + (self.time_ssrn - self.numb_kssr) * 20)
+            else:
+                para_dvsr *= 1
+        else:
+            para_pont += 0
+            para_dvsr *= 0
+        if self.mthd_ksur == 2:  # 彩船图纸限制
+            para_pont += (365 - self.time_urne)
+            para_dvsr *= 1
+        elif self.mthd_ksur == 1:
+            para_pont += 0
+            if self.numb_ksur <= self.time_urne:
+                para_dvsr *= (1 + (self.time_urne - self.numb_ksur) * 30)
+            else:
+                para_dvsr *= 1
+        else:
+            para_pont += 0
+            para_dvsr *= 1
+        if self.mthd_tcur == 2:  # 彩装蓝图限制
+            para_pont += self.valu_tcur
+            para_dvsr *= 1
+        elif self.mthd_tcur == 1:
+            para_pont += 0
+            if self.valu_tcur <= self.numb_ksur:
+                para_dvsr *= (1 + (self.numb_ksur - self.valu_tcur) * 400)
+            else:
+                para_dvsr *= 1
+        else:
+            para_pont += 0
+            para_dvsr *= 1
+        if self.mthd_mtrl == 2:  # 物资消耗限制
+            para_pont += (40000 - self.aver_mtrl) / 70
+            para_dvsr *= 1
+        elif self.mthd_mtrl == 1:
+            para_pont += 0
+            if self.numb_mtrl <= self.aver_mtrl:
+                para_dvsr *= (1 + (self.aver_mtrl - self.numb_mtrl) * 0.001)
+            else:
+                para_dvsr *= 1
+        else:
+            para_pont += 0
+            para_dvsr *= 1
         return vari_evsc
 
 

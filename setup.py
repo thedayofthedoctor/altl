@@ -28,7 +28,7 @@ with open("Descriptiption.md", 'r', encoding="utf-8") as dest_pimd:
 
 setup(
     name="AzurLaneToolLib",
-    version="0.6.0",
+    version="0.6.1β1",
 
     author="Matt Belfast Brown",
     author_email="thedayofthedo@gmail.com",
@@ -58,5 +58,5 @@ setup(
         ],
     platforms="any",
     install_requires=['lzstring'],
-    python_requires=">=3.6"
+    python_requires=">=3.7,<3.11"
 )
