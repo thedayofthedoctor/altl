@@ -213,7 +213,6 @@ class FitCal:
                 totl_outp *= meta_data[rows_numb][1]
                 self.list_valu[numb_time][0] = totl_cost
                 self.list_valu[numb_time][1] = totl_outp
-                # noinspection PyTypeChecker
                 self.list_valu[numb_time][2] = totl_outp - self.para_incp * totl_cost
                 self.list_valu[numb_time][3] = meta_data[rows_numb][2]
                 self.list_valu[numb_time][4] = meta_data[rows_numb][1]
@@ -328,7 +327,7 @@ class FitCal:
         dic_oupt_seco = self.iir_cuin_calc(self.valu_ksec, meta_data, 1)  # 第二阶段基础产出
         dic_oupt_thir = self.iir_cuin_calc(self.valu_kthi, meta_data, 2)  # 第三阶段基础产出
         list_oupt = [dic_oupt_firs, dic_oupt_seco, dic_oupt_thir]  # 基础产出列表
-        para_evsc = self.iir_fitn_calc(vari_plpe, meta_data, list_oupt)  # 基础收益产出计算
+        para_evsc = self.iir_fitn_calc(vari_plpe, list_oupt)  # 基础收益产出计算
         return para_evsc
 
     def iir_gain_opls(self, vari_plpe, list_oupt):
@@ -369,13 +368,37 @@ class FitCal:
         self.aver_mdcb = self.valu_mtrl / 365
         self.time_urne += self.time_ssrn
 
-    def iir_fitn_calc(self, vari_plpe, meta_data, list_oupt):
+    def iir_fitn_calc(self, vari_plpe, list_oupt):
         """适应度计算"""
         self.numb_tcur *= 50
         vari_evsc = self.incm_pint
         self.iir_gain_opls(vari_plpe, list_oupt)
         para_pont = 0
         para_dvsr = 1
+        if self.mthd_mtrl == 2:  # 物资消耗限制
+            para_pont += (40000 - self.aver_mtrl) / 70
+            para_dvsr *= 1
+        elif self.mthd_mtrl == 1:
+            para_pont += 0
+            if self.numb_mtrl <= self.aver_mtrl:
+                para_dvsr *= (1 + (self.aver_mtrl - self.numb_mtrl) * 0.001)
+            else:
+                para_dvsr *= 1
+        else:
+            para_pont += 0
+            para_dvsr *= 1
+        if self.mthd_mdcb == 2:  # 魔方消耗限制
+            para_pont += (60 - self.aver_mdcb) * 6
+            para_dvsr *= 1
+        elif self.mthd_mdcb == 1:
+            para_pont += 0
+            if self.numb_mdcb <= self.aver_mdcb:
+                para_dvsr *= (1 + (self.aver_mdcb - self.numb_mdcb))
+            else:
+                para_dvsr *= 1
+        else:
+            para_pont += 0
+            para_dvsr *= 1
         if self.mthd_kssr == 2:  # 金船图纸限制
             para_pont += (365 - self.time_ssrn)
             para_dvsr *= 1
@@ -412,18 +435,31 @@ class FitCal:
         else:
             para_pont += 0
             para_dvsr *= 1
-        if self.mthd_mtrl == 2:  # 物资消耗限制
-            para_pont += (40000 - self.aver_mtrl) / 70
+        if self.mthd_mtut == 2:  # 心智单元限制
+            para_pont += self.valu_mtut / 180
             para_dvsr *= 1
-        elif self.mthd_mtrl == 1:
+        elif self.mthd_mtut == 1:
             para_pont += 0
-            if self.numb_mtrl <= self.aver_mtrl:
-                para_dvsr *= (1 + (self.aver_mtrl - self.numb_mtrl) * 0.001)
+            if self.valu_mtut <= self.numb_mtut:
+                para_dvsr *= (1 + (self.valu_mtut - self.numb_mtut) * 0.5)
             else:
                 para_dvsr *= 1
         else:
             para_pont += 0
             para_dvsr *= 1
+        self.numb_urse = 0  # 重置彩剩余参数
+        self.valu_mtrl = 0  # 重置物资参数值
+        self.valu_mdcb = 0  # 重置魔方参数值
+        self.valu_kssr = 0  # 重置金图纸参数
+        self.valu_ksur = 0  # 重置彩图纸参数
+        self.valu_tcur = 0  # 重置彩蓝图参数
+        self.valu_mtut = 0  # 重置心智参数值
+        self.numb_nssr = 0  # 重置金图纸现需
+        self.numb_neur = 0  # 重置彩图纸现需
+        self.time_ssrn = 0  # 重置金船需时长
+        self.time_urne = 0  # 重置彩船需时长
+        self.aver_mtrl = 0  # 重置日物资参数
+        self.aver_mdcb = 0  # 重置日魔方参数
         return vari_evsc
 
 

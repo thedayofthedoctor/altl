@@ -48,8 +48,8 @@ Litai Street, Yangling District, Shaanxi Province, China**
 
 | Release Version |  Status   | Release Data | Update Info                                  | 
 |----------------:|:---------:|:------------:|:---------------------------------------------|
-|           0.7.0 |  working  |    future    | Upgrade the compilation environment to 3.10. |
-|           0.6.1 |  working  |  2023-03-10  | Finish ` mode_ SRS_ Ptl.py`.                 |
+|           0.7.0 |  future   |    future    | Upgrade the compilation environment to 3.10. |
+|           0.6.1 |  working  |  2023-03-10  | Add mode ` mode_ SRS_ Ptl.py`.               |
 |           0.6.0 | available |  2022-10-20  | Re planned version number                    |                                     |
 |         0.5.3.1 | available |  2022-09-13  | Update new kansen name.                      |
 |           0.5.3 | available |  2022-03-27  | Add and correct all comments.                |
@@ -59,6 +59,11 @@ Litai Street, Yangling District, Shaanxi Province, China**
 |          before | available |    before    | before                                       |
 
 ## Version Update Information
+
+### 0.6.1
++ Complete data verification
++ Complete Module ` mode_ SRS_ Ptl.py`
++ Fixed some errors
 
 ### 0.6.0
 
