@@ -14,11 +14,11 @@ mode_SRS_Pyl.py - The core code part of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2023-03-04
-Version: 0.6.1r1
+Version Date: 2023-03-05
+Version: 0.6.1
 Mode Create Date: 2020-10-13
-Mode Date: 2023-03-04
-Mode Version: 1.0.0β1
+Mode Date: 2023-03-05
+Mode Version: 1.0.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -360,6 +360,9 @@ class FitCal:
         self.aver_mtrl = self.valu_mtrl / 365
         self.aver_mdcb = self.valu_mtrl / 365
         self.time_urne += self.time_ssrn
+        dic_oupt_comb = {"time_kssr": self.time_ssrn, "time_knur": self.time_urne, "valu_tcur": self.valu_tcur,
+                         "valu_mtut": self.valu_mtut, "aver_mtrl": self.aver_mtrl, "aver_mdcb": self.aver_mdcb}
+        return dic_oupt_comb
 
     def iir_fitn_calc(self, vari_plpe, list_oupt):
         """适应度计算"""
