@@ -2,6 +2,7 @@
 
 Tools lib for Azur Lane which game powered by ManJiu Shanghai.
 Accelerating library iteration.
+
 ## Copyright Information
 
 ### LICENSE
@@ -42,13 +43,14 @@ Litai Street, Yangling District, Shaanxi Province, China**
 
 > First Edition Time: 2019-07-11  
 > Last Revision Time: 2023-03-05  
-> Version Number: 0.6.1
+> Version Number: 0.6.2
 
 ## Update Log
 
 | Release Version |  Status   | Release Data | Update Info                                  | 
 |----------------:|:---------:|:------------:|:---------------------------------------------|
 |           0.7.0 |  future   |    future    | Upgrade the compilation environment to 3.10. |
+|           0.6.2 | available |  2023-03-05  | Fixed some errors.                           |
 |           0.6.1 | available |  2023-03-05  | Add mode ` mode_ SRS_ Ptl.py`.               |
 |           0.6.0 | available |  2022-10-20  | Re planned version number                    |                                     |
 |         0.5.3.1 | available |  2022-09-13  | Update new kansen name.                      |
@@ -60,7 +62,12 @@ Litai Street, Yangling District, Shaanxi Province, China**
 
 ## Version Update Information
 
+### 0.6.2
+
++ Fixed some errors
+
 ### 0.6.1
+
 + Complete data verification
 + Complete Module ` mode_ SRS_ Ptl.py`
 + Fixed some errors
@@ -71,7 +78,7 @@ Litai Street, Yangling District, Shaanxi Province, China**
 + Revised ship data
 + New Data File ` data_AZR_Lan.py`
 + Delete Original Data ` data_FLE_Shi.py`
-+ New Incomplete Module ` mode_SRS_Ptl.py` (**original author:tianqianzhiyang**) 
++ New Incomplete Module ` mode_SRS_Ptl.py` (**original author:tianqianzhiyang**)
 
 ### 0.5.3.1
 

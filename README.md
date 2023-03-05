@@ -43,6 +43,7 @@ Accelerating library iteration.
 
 | Release Version |  Status   | Release Data | Update Info                   | 
 |----------------:|:---------:|:------------:|:------------------------------|
+|           0.6.2 | available |  2023-03-05  | Fixed some errors.            |
 |           0.6.1 | available |  2023-03-05  | Add mode `mode_SRS_Ptl.py`    |
 |           0.6.0 | available |  2022-10-20  | Re planned version number     |                                     |
 |         0.5.3.1 | available |  2022-09-13  | Update new kansen name.       |
@@ -54,9 +55,13 @@ Accelerating library iteration.
 
 **First Edition Time: 2019-07-11**  
 **Last Revision Time: 2023-03-05**  
-**Version Number: 0.6.1**
+**Version Number: 0.6.2**
 
-> **Version Update Log:**  
+> **Version Update Log:**
+> 
+>> #### 0.6.2
+>> + 修正了部分错误
+> 
 >> #### 0.6.1
 >> + 完成数据核验
 >> + 完成模块`mode_SRS_Ptl.py`

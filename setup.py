@@ -9,7 +9,7 @@ Author: Matt Belfast Brown
 E-mail: thedayofthedo@gmail.com
 Create Date: 2019-07-11
 Version Date: 2023-03-05
-Version: 0.6.1
+Version: 0.6.2
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -28,7 +28,7 @@ with open("Descriptiption.md", 'r', encoding="utf-8") as dest_pimd:
 
 setup(
     name="AzurLaneToolLib",
-    version="0.6.1",
+    version="0.6.2",
 
     author="Matt Belfast Brown",
     author_email="thedayofthedo@gmail.com",

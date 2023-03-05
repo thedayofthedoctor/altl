@@ -10,10 +10,10 @@ This file's data comes from `Azur Lane Fleet Tool`(https://github.com/x94fujo6rp
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-05
-Version: 0.6.1
+Version: 0.6.2
 Data Create Date: 2022-10-18
-Data Version Date: 2023-03-04
-Data Version: 0.2.1
+Data Version Date: 2023-03-05
+Data Version: 0.2.2
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -25,7 +25,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-dic_ksen_natl = {
+dic_ksen_natl = {  # 舰船阵营代码
     "64000": {"vari_ntid": 64000, "zhcn_name": "其他", "zhtw_name": "其他", "engb_name": "Other", "jajp_name": "その他"},
     "64001": {"vari_ntid": 64001, "zhcn_name": "白鹰", "zhtw_name": "白鷹", "engb_name": "Eagle Union",
               "jajp_name": "ユニオン"},
@@ -65,7 +65,7 @@ dic_ksen_natl = {
               "jajp_name": "SSSS"}
 }
 
-dic_eqip_type = {
+dic_eqip_type = {  # 舰船装备代码
     "8501": {"vari_eqid": 8501, "zhcn_name": "驱逐炮", "zhtw_name": "驅逐砲", "engb_name": "DD Gun",
              "jajp_name": "駆逐砲"},
     "8502": {"vari_eqid": 8502, "zhcn_name": "轻巡炮", "zhtw_name": "輕巡砲", "engb_name": "CL Gun",
@@ -102,7 +102,7 @@ dic_eqip_type = {
     "8520": {"vari_eqid": 8520, "zhcn_name": "导弹", "zhtw_name": "導彈", "engb_name": "Missile", "jajp_name": "ミサイル"}
 }
 
-dic_ksen_type = {
+dic_ksen_type = {  # 舰船类型代码
     "801": {"ksen_tpid": "801", "zhcn_name": "潜艇", "zhtw_name": "潛艇", "engb_name": "Submarine",
             "jajp_name": "潜水艦", "pos": "sub"},
     "881": {"ksen_tpid": "881", "zhcn_name": "潜母", "zhtw_name": "潛母", "engb_name": "Submarine Carrier",
@@ -136,7 +136,7 @@ dic_ksen_type = {
     "900": {"ksen_tpid": "900", "zhcn_name": "其他", "zhtw_name": "其他", "engb_name": "Other", "jajp_name": "その他"}
 }
 
-dic_ksen_rari = {
+dic_ksen_rari = {  # 舰船稀有度代码
     "6": {"ksen_raid": 6, "zhcn_name": "海上传奇", "zhtw_name": "海上傳奇", "engb_name": "Ultra Rare",
           "jajp_name": "UR"},
     "5": {"ksen_raid": 5, "zhcn_name": "超稀有", "zhtw_name": "超稀有", "engb_name": "SuperRare", "jajp_name": "SSR"},
@@ -145,7 +145,7 @@ dic_ksen_rari = {
     "2": {"ksen_raid": 2, "zhcn_name": "普通", "zhtw_name": "普通", "engb_name": "Normal", "jajp_name": "N"}
 }
 
-dic_ksen_data = {
+dic_ksen_data = {  # 舰船数据
     '2280000100': {'vari_ksid': 2280000100, 'zhcn_name': '猎人', 'zhtw_name': '獵人', 'jajp_name': 'ハンター',
                    'engb_name': 'Hunter', 'vari_rari': 3, 'vari_kstp': '100', 'vari_natl': 64002, 'bool_retr': 0,
                    'type_equp': [[86001], [86005], [86006], [86010, 86014], [86010, 86014]],

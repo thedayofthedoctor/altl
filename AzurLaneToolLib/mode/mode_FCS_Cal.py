@@ -8,10 +8,10 @@ mode_FCS_Cal.py - The core mode of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-05
-Version: 0.6.1
+Version: 0.6.2
 Mode Create Date: 2020-05-27
-Mode Date: 2023-03-04
-Mode Version: 0.6.3
+Mode Date: 2023-03-05
+Mode Version: 1.0.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -71,7 +71,7 @@ def fun_bsdg_fuca(vari_ksct: str, vari_rare: str, vari_ksnm: str) -> int:
     return vari_dgfu
 
 
-def fun_sfks_fuca(vari_brea: int, vari_ksct: str, vari_rare: str, vari_ksnm: str, vari_kslv: int) -> int:
+def fun_sfks_fuca(plan_ksen, vari_brea: int, ksen_type: str , vari_ksct: str, vari_rare: str, vari_ksnm: str, vari_kslv: int) -> int:
     """
     This function is used to calculate the fuel consumption of surface Kansen.
     :param vari_brea: 变量 舰船突破度 variable breakthrough degree of Kansen
@@ -92,10 +92,18 @@ def fun_sfks_fuca(vari_brea: int, vari_ksct: str, vari_rare: str, vari_ksnm: str
         para_brco = 3
     else:
         para_brco = 0
+    if plan_ksen:
+        para_brco = 3
+    else:
+        para_brco += 0
     vari_brco = list_brco[para_brco]  # 突破度油耗
     vari_dgfu = fun_bsdg_fuca(vari_ksct, vari_rare, vari_ksnm)
-    vari_sfkf = int(int(1 + (vari_dgfu * (0.5 + min(vari_kslv, 99)) * 0.05)) + vari_brco)
-    return vari_sfkf
+    if ksen_type == "Surface":
+        para_kskf = 1
+    else:
+        para_kskf = 0
+    vari_kskf = int(int(para_kskf + (vari_dgfu * (0.5 + min(vari_kslv, 99)) * 0.05)) + vari_brco)
+    return vari_kskf
 
 
 def fun_kstp_scco(para_ksnm: str) -> int:

@@ -15,8 +15,8 @@ mode_SRS_Pyl.py - The core code part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-05
-Version: 0.6.1
-Mode Create Date: 2020-10-13
+Version: 0.6.2
+Mode Create Date: 2022-10-13
 Mode Date: 2023-03-05
 Mode Version: 1.0.0
 
