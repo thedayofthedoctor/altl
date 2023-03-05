@@ -1,3 +1,13 @@
+<h1 align="center"> Azur Lane Tool Lib </h1>
+<h4 align="center">Tools lib for Azur Lane which game powered by ManJiu Shanghai.
+Accelerating library iteration.</h4>
+<p  align="center">
+<a href="https://pypi.org/manage/project/AzurLaneToolLib/release/0.6.2/"><img src="https://img.shields.io/pypi/v/azurlanetoollib"></a>
+<a href="https://www.gnu.org/licenses/quick-guide-gplv3.zh-cn.html"><img src="https://img.shields.io/pypi/l/azurlanetoollib?color=green"></a>
+<img src="https://img.shields.io/pypi/dd/azurlanetoollib?color=yellow">
+</p>
+<hr />
+
 # AzurLaneToolLib
 
 Tools lib for Azur Lane which game powered by ManJiu Shanghai.
@@ -50,6 +60,7 @@ Litai Street, Yangling District, Shaanxi Province, China**
 | Release Version |  Status   | Release Data | Update Info                                  | 
 |----------------:|:---------:|:------------:|:---------------------------------------------|
 |           0.7.0 |  future   |    future    | Upgrade the compilation environment to 3.10. |
+|           0.6.3 |  working  |    future    | Write documents.                             |
 |           0.6.2 | available |  2023-03-05  | Fixed some errors.                           |
 |           0.6.1 | available |  2023-03-05  | Add mode ` mode_ SRS_ Ptl.py`.               |
 |           0.6.0 | available |  2022-10-20  | Re planned version number                    |                                     |
