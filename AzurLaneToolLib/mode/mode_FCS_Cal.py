@@ -7,8 +7,8 @@ mode_FCS_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2023-03-05
-Version: 0.6.2
+Version Date: 2023-03-08
+Version: 0.6.3
 Mode Create Date: 2020-05-27
 Mode Date: 2023-03-05
 Mode Version: 1.0.0

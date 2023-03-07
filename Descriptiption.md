@@ -52,15 +52,15 @@ Litai Street, Yangling District, Shaanxi Province, China**
 ## Version Information
 
 > First Edition Time: 2019-07-11  
-> Last Revision Time: 2023-03-05  
-> Version Number: 0.6.2
+> Last Revision Time: 2023-03-08  
+> Version Number: 0.6.3
 
 ## Update Log
 
-| Release Version |  Status   | Release Data | Update Info                                  | 
+| Release Version |  Status   | Release Date | Update Info                                  | 
 |----------------:|:---------:|:------------:|:---------------------------------------------|
 |           0.7.0 |  future   |    future    | Upgrade the compilation environment to 3.10. |
-|           0.6.3 |  working  |    future    | Write documents.                             |
+|           0.6.3 | available |  2023-03-08  | Write documents and improve information.     |
 |           0.6.2 | available |  2023-03-05  | Fixed some errors.                           |
 |           0.6.1 | available |  2023-03-05  | Add mode ` mode_ SRS_ Ptl.py`.               |
 |           0.6.0 | available |  2022-10-20  | Re planned version number                    |                                     |
@@ -72,7 +72,12 @@ Litai Street, Yangling District, Shaanxi Province, China**
 |          before | available |    before    | before                                       |
 
 ## Version Update Information
-
+ 
+### 0.6.3
+ 
++  Write documents 
++  Improve information 
+ 
 ### 0.6.2
 
 + Fixed some errors

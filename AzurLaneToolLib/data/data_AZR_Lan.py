@@ -9,8 +9,8 @@ This file's data comes from `Azur Lane Fleet Tool`(https://github.com/x94fujo6rp
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2023-03-05
-Version: 0.6.2
+Version Date: 2023-03-08
+Version: 0.6.3
 Data Create Date: 2022-10-18
 Data Version Date: 2023-03-05
 Data Version: 0.2.2

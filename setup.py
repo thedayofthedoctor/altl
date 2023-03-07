@@ -8,8 +8,8 @@ setup.py - The core part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 E-mail: thedayofthedo@gmail.com
 Create Date: 2019-07-11
-Version Date: 2023-03-05
-Version: 0.6.2
+Version Date: 2023-03-08
+Version: 0.6.3
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -28,7 +28,7 @@ with open("Descriptiption.md", 'r', encoding="utf-8") as dest_pimd:
 
 setup(
     name="AzurLaneToolLib",
-    version="0.6.2",
+    version="0.6.3",
 
     author="Matt Belfast Brown",
     author_email="thedayofthedo@gmail.com",
@@ -55,7 +55,10 @@ setup(
     zip_safe=True,
 
     classifiers=[
-        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     ],
     platforms="any",
