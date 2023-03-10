@@ -86,7 +86,7 @@ Litai Street, Yangling District, Shaanxi Province, China**
 ### 0.6.1
 
 + Complete data verification
-+ Complete Module ` mode_ SRS_ Ptl.py`
++ Complete Module ` mode_SRS_Ptl.py`
 + Fixed some errors
 
 ### 0.6.0
