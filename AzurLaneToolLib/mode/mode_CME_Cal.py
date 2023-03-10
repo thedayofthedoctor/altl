@@ -7,8 +7,8 @@ mode_CME_Cal.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2023-03-08
-Version: 0.6.3
+Version Date: 2023-03-11
+Version: 0.6.4
 Mode Create Date: 2019-08-10
 Mode Date: 2022-10-20
 Mode Version: 1.0.2
@@ -28,7 +28,7 @@ You should have received a copy of the GNU General Public License along with thi
 def fun_evdb_cmul(vari_cmlv: int) -> int:
     """
     此函数计算指挥官某级的升级经验值参数.
-    This function calculates the commander's level-up experience value parameter.
+    This function calculates the commander"s level-up experience value parameter.
     :param vari_cmlv: 变量 指挥官等级 variable commander level
     :return: vari_cler - 变量 指挥官升级所需经验值参数 Variables The EXP parameter required for the commander to level up.
     """

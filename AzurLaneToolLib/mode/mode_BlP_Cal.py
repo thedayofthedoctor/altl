@@ -8,7 +8,7 @@ mode_BlP_Cal.py - The core mode of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-08
-Version: 0.6.3
+Version: 0.6.4
 Mode Create Date: 2020-05-02
 Mode Date: 2022-10-20
 Mode Version: 1.1.4
@@ -49,14 +49,14 @@ def fun_cnbp_rqup(flag_pltp: str, vari_plle: int) -> int:
     """
     此函数输入舰船科研类别与科研等级,输出升级所需蓝图数量.
     This function inputs the research type and research level of the ship, and outputs the number of blueprints required for the upgrade.
-    :param flag_pltp: 舰船科研类别 包括 'Top Solution'(最高方案)和'Decisive Plan'(决战方案)两个参数.
-    The ship research category includes  'Top Solution' and 'Decisive Plan' parameters.
+    :param flag_pltp: 舰船科研类别 包括 "Top Solution"(最高方案)和"Decisive Plan"(决战方案)两个参数.
+    The ship research category includes  "Top Solution" and "Decisive Plan" parameters.
     :param vari_plle: 变量 科研等级 <Plan Level>
     :return: vari_bprq - 变量 升级所需蓝图数量 <Number of Blueprint which Required for Upgrade>
     """
-    if flag_pltp == 'Top Solution':
+    if flag_pltp == "Top Solution":
         vari_bprq = fun_cnbp_rqub(vari_plle)
-    elif flag_pltp == 'Decisive Plan':
+    elif flag_pltp == "Decisive Plan":
         vari_bprq = int(fun_cnbp_rqub(vari_plle) * 1.5)
     else:
         vari_bprq = 0
@@ -67,8 +67,8 @@ def fun_cnbp_rrcl(flag_pltp: str, vari_plde: int, vari_epbp: int, vari_lede: int
     """
     此函数输入下列五个参数输出非天运科研图纸需求数量以及已用图纸数量。
     This function inputs the following five parameters and outputs the required quantity of non-Tianyun scientific research drawings and the quantity of used blueprints.
-    :param flag_pltp: 舰船科研类别 包括:'Top Solution'(最高方案)和'Decisive Plan'(决战方案)两个参数.
-    The ship research category includes: 'Top Solution' and 'Decisive Plan' parameters.
+    :param flag_pltp: 舰船科研类别 包括:"Top Solution"(最高方案)和"Decisive Plan"(决战方案)两个参数.
+    The ship research category includes: "Top Solution" and "Decisive Plan" parameters.
     :param vari_plde: 已拥有未使用的蓝图数量. Already have the number of unused blueprints.
     :param vari_epbp: 本级已使用的蓝图数量. The number of blueprints used by this level.
     :param vari_lede: 需要升到的科研等级. The plan level which need.
@@ -91,8 +91,8 @@ def fun_cnbp_tyfi(flag_pltp: str, vari_tfdl: int, vari_tyfg: int, vari_crtf: int
     """
     此函数输入下列四个参数输出天运拟合总需蓝图数与天运拟合总用蓝图数.
     This function inputs the following four parameters and outputs the total number of blueprints required for the fitting of the sky and the total number of blueprints used for the fitting of the sky.
-    :param flag_pltp: 舰船科研类别 包括:'Top Solution'(最高方案)和'Decisive Plan'(决战方案)两个参数.
-    The ship research category includes: 'Top Solution' and 'Decisive Plan' parameters.
+    :param flag_pltp: 舰船科研类别 包括:"Top Solution"(最高方案)和"Decisive Plan"(决战方案)两个参数.
+    The ship research category includes: "Top Solution" and "Decisive Plan" parameters.
     :param vari_tfdl: 天运拟合现有等级. Tianyun fits existing grades.
     :param vari_tyfg: 天运拟合未使用蓝图数量. Number of unused blueprints.
     :param vari_crtf: 天运拟合目前经验值. Tianyun fits the current experience value.
@@ -100,12 +100,12 @@ def fun_cnbp_tyfi(flag_pltp: str, vari_tfdl: int, vari_tyfg: int, vari_crtf: int
     The total number of blueprints required for Tianyun fitting. The total number of blueprints required for Tianyun fitting.
     """
     vari_bpty = 0
-    if flag_pltp == 'Top Solution':
+    if flag_pltp == "Top Solution":
         for i in range(vari_tfdl):
             vari_bpty += list_fitt[i]
         vari_bpty += int((vari_crtf / 100) * list_fitt[vari_tfdl])
         vari_tbtf = 165 - vari_tyfg - vari_bpty
-    elif flag_pltp == 'Decisive Plan':
+    elif flag_pltp == "Decisive Plan":
         for i in range(vari_tfdl):
             vari_bpty += list_fitd[i]
         vari_bpty += int((vari_crtf / 100) * list_fitt[vari_tfdl])
@@ -120,8 +120,8 @@ def fun_cnbp_rbpt(flag_pltp: str, flag_pftf: str, vari_lede: int, vari_levn: int
     """
     此函数是集合函数，聚合上述函数内容的综合型函数.
     This function is an aggregate function, a comprehensive function that aggregates the contents of the above functions.
-    :param flag_pltp: 舰船科研类别 包括:'Top Solution'(最高方案)和'Decisive Plan'(决战方案)两个参数.
-    The ship research category includes: 'Top Solution' and 'Decisive Plan' parameters.
+    :param flag_pltp: 舰船科研类别 包括:"Top Solution"(最高方案)和"Decisive Plan"(决战方案)两个参数.
+    The ship research category includes: "Top Solution" and "Decisive Plan" parameters.
     :param flag_pftf: 是否计算天运拟合，包括 True 和 False 两个参数。
     Whether to calculate the luck fit, including two parameters True and False.
     :param vari_lede: 需要升到的科研等级. The plan level which need.

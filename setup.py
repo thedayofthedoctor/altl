@@ -8,8 +8,8 @@ setup.py - The core part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 E-mail: thedayofthedo@gmail.com
 Create Date: 2019-07-11
-Version Date: 2023-03-08
-Version: 0.6.3
+Version Date: 2023-03-11
+Version: 0.6.4
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -23,12 +23,12 @@ You should have received a copy of the GNU General Public License along with thi
 
 from setuptools import setup, find_packages
 
-with open("Descriptiption.md", 'r', encoding="utf-8") as dest_pimd:
+with open("Descriptiption.md", "r", encoding="utf-8") as dest_pimd:
     long_description = dest_pimd.read()
 
 setup(
     name="AzurLaneToolLib",
-    version="0.6.3",
+    version="0.6.4",
 
     author="Matt Belfast Brown",
     author_email="thedayofthedo@gmail.com",
@@ -46,11 +46,12 @@ setup(
     },
 
     packages=find_packages(),
-    py_modules=['AzurLaneToolLib.__init__', 'AzurLaneToolLib.mode.__init__', 'AzurLaneToolLib.data.__init__',
-                'AzurLaneToolLib.mode.mode_BlP_Cal', 'AzurLaneToolLib.mode.mode_EXP_Cal',
-                'AzurLaneToolLib.mode.mode_KSN_Com', 'AzurLaneToolLib.mode.mode_CME_Cal',
-                'AzurLaneToolLib.mode.mode_FCS_Cal', 'AzurLaneToolLib.mode.mode_FLE_Tol',
-                'AzurlaneToolLib.mode.mode_SRS_Ptl', 'AzurLAneToolLib.data.data_AZR_Lan'],
+    py_modules=["AzurLaneToolLib.__init__", "AzurLaneToolLib.mode.__init__", "AzurLaneToolLib.data.__init__",
+                "AzurLaneToolLib.mode.mode_BlP_Cal", "AzurLaneToolLib.mode.mode_CME_Cal",
+                "AzurLaneToolLib.mode.mode_EXP_Cal", "AzurLaneToolLib.mode.mode_FCS_Cal",
+                "AzurLaneToolLib.mode.mode_FLE_Tol", "AzurLaneToolLib.mode.mode_KSN_Com",
+                "AzurLaneToolLib.mode.mode_MSC_Cal", "AzurlaneToolLib.mode.mode_SRS_Ptl",
+                "AzurLAneToolLib.data.data_AZR_Lan"],
     include_package_data=True,
     zip_safe=True,
 
@@ -59,9 +60,10 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     ],
     platforms="any",
-    install_requires=['lzstring'],
-    python_requires=">=3.7,<3.11"
+    install_requires=["lzstring"],
+    python_requires=">=3.7,<=3.11"
 )

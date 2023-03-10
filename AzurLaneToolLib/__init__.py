@@ -7,8 +7,8 @@ __init__.py - The core part of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2023-03-08
-Version: 0.6.3
+Version Date: 2023-03-11
+Version: 0.6.4
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -28,16 +28,17 @@ import AzurLaneToolLib.mode.mode_EXP_Cal as mode_EXP_Cal
 import AzurLaneToolLib.mode.mode_FCS_Cal as mode_FCS_Cal
 import AzurLaneToolLib.mode.mode_FLE_Tol as mode_FLE_Tol
 import AzurLaneToolLib.mode.mode_KSN_Com as mode_KSN_Com
+import AzurLaneToolLib.mode.mode_MSC_Cal as mode_MSC_Cal
 import AzurLaneToolLib.mode.mode_SRS_Ptl as mode_SRS_Ptl
 
 # information list
 __title__ = "AzurLaneToolLib"
-__version__ = "0.6.3"
+__version__ = "0.6.4"
 __author__ = "Matt Belfast Brown"
 __license__ = "GPL-3.0"
 __copyright__ = "Copyright (c) 2020-2023 Matt Belfast Brown"
-__all__ = ["mode", "data", "mode_EXP_Cal", "mode_BlP_Cal", "mode_KSN_Com", "mode_FCS_Cal", "mode_CME_Cal",
-           "data_AZR_Lan", "mode_FLE_Tol", "mode_SRS_Ptl"]
+__all__ = ["mode", "data", "data_AZR_Lan", "mode_BlP_Cal", "mode_CME_Cal", "mode_EXP_Cal", "mode_FCS_Cal",
+           "mode_FLE_Tol", "mode_MSC_Cal", "mode_KSN_Com", "mode_SRS_Ptl"]
 
 # class list
 FitCal = mode_SRS_Ptl.FitCal
@@ -56,6 +57,7 @@ fun_crex_cele = mode_EXP_Cal.fun_crex_cele
 fun_bsdg_fuca = mode_FCS_Cal.fun_bsdg_fuca
 fun_kstp_scco = mode_FCS_Cal.fun_kstp_scco
 fun_sfks_fuca = mode_FCS_Cal.fun_sfks_fuca
+fun_subd_fuco = mode_FCS_Cal.fun_subd_fuco
 fun_maks_code = mode_FLE_Tol.fun_maks_code
 fun_ksen_nmco = mode_KSN_Com.fun_ksen_nmco
 fun_gain_valu = mode_SRS_Ptl.fun_gain_valu
