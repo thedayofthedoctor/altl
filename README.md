@@ -69,6 +69,7 @@ Litai Street, Yangling District, Shaanxi Province, China**
 
 | Release Version |    Status     |  Release Data  | Update Info                                  | 
 |----------------:|:-------------:|:--------------:|:---------------------------------------------|
+|           0.6.4 |    working    |   2023-03-12   | Add the next scheduled module, fit for 3.11. |
 |       **0.6.3** | **available** | **2023-03-08** | **Write documents and Improve information.** |
 |           0.6.2 |   available   |   2023-03-05   | Fixed some errors.                           |
 |           0.6.1 |   available   |   2023-03-05   | Add mode `mode_SRS_Ptl.py`                   |
@@ -80,9 +81,9 @@ Litai Street, Yangling District, Shaanxi Province, China**
 |         0.5.1α2 |   available   |   2022-02-18   | Test for 0.5.1 and new md.                   |
 
 **First Edition Time: 2019-07-11**  
-**Last Revision Time: 2023-03-08**  
+**Last Revision Time: 2023-03-11**  
 **Version Number: 0.6.3**  
-**ReadMe.md Version: 0.6.3**
+**ReadMe.md Version: 0.6.3.1**
 
 > **Version Update Log:**
 >
