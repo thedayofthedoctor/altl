@@ -25,10 +25,30 @@ YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
 
 Copyright (C) 2019-2023 Matt Belfast Brown
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU keygral Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU keygral Public License for more details.
-You should have received a copy of the GNU keygral Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU keygral Public License as
+published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU keygral Public License for more details.
+You should have received a copy of the GNU keygral Public License along with this program.  If not,
+see <http://www.gnu.org/licenses/>.
 """
+
+#  The software is designed to provide functions for Azur Lane Tools.
+#  Copyright (C) 2019-2023 Matt Belfast Brown
+#  Copyright (c) 2023.
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
 
 import copy
 import random
@@ -37,7 +57,7 @@ import random
 # define class
 class KsenKeyGen:
     # define internal implementation of class
-    def __init__(self, dic_polc_rstr: list):
+    def __init__(self, dic_polc_rstr: dict):
         """
         This implementation sets the main parameters of the Kansen plan.
         此实现方案对舰船计划部分主要参数进行设定。
@@ -360,8 +380,10 @@ class FitCal:
         self.aver_mtrl = self.valu_mtrl / 365
         self.aver_mdcb = self.valu_mtrl / 365
         self.time_urne += self.time_ssrn
-        dic_oupt_comb = {"time_kssr": self.time_ssrn, "time_knur": self.time_urne, "valu_tcur": self.valu_tcur,
-                         "valu_mtut": self.valu_mtut, "aver_mtrl": self.aver_mtrl, "aver_mdcb": self.aver_mdcb}
+        dic_oupt_comb = {
+            "time_kssr": self.time_ssrn, "time_knur": self.time_urne, "valu_tcur": self.valu_tcur,
+            "valu_mtut": self.valu_mtut, "aver_mtrl": self.aver_mtrl, "aver_mdcb": self.aver_mdcb
+            }
         return dic_oupt_comb
 
     def iir_fitn_calc(self, vari_plpe, list_oupt):
@@ -530,62 +552,120 @@ def fun_mkmt_data():
 
 # define list
 list_pldt = [
-    {"plan_name": "魔方解析1h", "cost_time": 1, "prob_ablt": 0.116201789, "cost_mtul": 0, "cost_mdcb": 3,
-     "gain_kssr": 2.77, "gain_knur": 0.66, "gain_tcur": 0, "gain_mtut": 40},
-    {"plan_name": "魔方解析2h", "cost_time": 2, "prob_ablt": 0.072676553, "cost_mtul": 0, "cost_mdcb": 6,
-     "gain_kssr": 2.03, "gain_knur": 0.48, "gain_tcur": 0, "gain_mtut": 30.16},
-    {"plan_name": "魔方解析4h", "cost_time": 4, "prob_ablt": 0.011272179, "cost_mtul": 0, "cost_mdcb": 10,
-     "gain_kssr": 1.39, "gain_knur": 0.33, "gain_tcur": 0, "gain_mtut": 20.77},
-    {"plan_name": "心智补全0.5h", "cost_time": 0.5, "prob_ablt": 0.000857392, "cost_mtul": 8000,
-     "cost_mdcb": 3, "gain_kssr": 9.88, "gain_knur": 2.34, "gain_tcur": 0, "gain_mtut": 194.49},
-    {"plan_name": "舰装解析1h", "cost_time": 1, "prob_ablt": 0.092421779, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.042, "gain_mtut": 0},
-    {"plan_name": "舰装解析2h", "cost_time": 2, "prob_ablt": 0.044886976, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.042, "gain_mtut": 0},
-    {"plan_name": "舰装解析4h", "cost_time": 4, "prob_ablt": 0.022998271, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.042, "gain_mtut": 0},
-    {"plan_name": "舰装解析0.5h", "cost_time": 0.5, "prob_ablt": 0.009002613, "cost_mtul": 5000,
-     "cost_mdcb": 0, "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.693, "gain_mtut": 0},
-    {"plan_name": "金船定向2.5h", "cost_time": 2.5, "prob_ablt": 0.071602948, "cost_mtul": 3000,
-     "cost_mdcb": 0, "gain_kssr": 0.91, "gain_knur": 0, "gain_tcur": 0.016, "gain_mtut": 0},
-    {"plan_name": "金船定向5h", "cost_time": 5, "prob_ablt": 0.045716093, "cost_mtul": 5000, "cost_mdcb": 0,
-     "gain_kssr": 0.75, "gain_knur": 0, "gain_tcur": 0.011, "gain_mtut": 0},
-    {"plan_name": "金船定向8h", "cost_time": 8, "prob_ablt": 0.007370892, "cost_mtul": 8000, "cost_mdcb": 0,
-     "gain_kssr": 0.75, "gain_knur": 0, "gain_tcur": 0.011, "gain_mtut": 0},
-    {"plan_name": "金船定向0.5h", "cost_time": 0.5, "prob_ablt": 0.001076647, "cost_mtul": 5000,
-     "cost_mdcb": 5, "gain_kssr": 18, "gain_knur": 0, "gain_tcur": 0.25, "gain_mtut": 0},
-    {"plan_name": "彩船定向2.5h", "cost_time": 2.5, "prob_ablt": 0.047735299, "cost_mtul": 3000,
-     "cost_mdcb": 0, "gain_kssr": 0, "gain_knur": 0.61, "gain_tcur": 0.016, "gain_mtut": 0},
-    {"plan_name": "彩船定向5h", "cost_time": 5, "prob_ablt": 0.030477395, "cost_mtul": 5000, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0.51, "gain_tcur": 0.011, "gain_mtut": 0},
-    {"plan_name": "彩船定向8h", "cost_time": 8, "prob_ablt": 0.004913928, "cost_mtul": 8000, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0.51, "gain_tcur": 0.011, "gain_mtut": 0},
-    {"plan_name": "彩船定向0.5h", "cost_time": 0.5, "prob_ablt": 0.000717765, "cost_mtul": 5000,
-     "cost_mdcb": 5, "gain_kssr": 0, "gain_knur": 11.77, "gain_tcur": 0.25, "gain_mtut": 0},
-    {"plan_name": "资金募集1.5h", "cost_time": 1.5, "prob_ablt": 0.099810477, "cost_mtul": 1500,
-     "cost_mdcb": 0, "gain_kssr": 0.55, "gain_knur": 0.13, "gain_tcur": 0.018, "gain_mtut": 0},
-    {"plan_name": "资金募集2.5h", "cost_time": 2.5, "prob_ablt": 0.065086115, "cost_mtul": 3000,
-     "cost_mdcb": 0, "gain_kssr": 0.46, "gain_knur": 0.11, "gain_tcur": 0.014, "gain_mtut": 0},
-    {"plan_name": "资金募集4h", "cost_time": 4, "prob_ablt": 0.050838283, "cost_mtul": 6000, "cost_mdcb": 0,
-     "gain_kssr": 0.52, "gain_knur": 0.12, "gain_tcur": 0.03, "gain_mtut": 0},
-    {"plan_name": "蓝试验品募集2h", "cost_time": 2, "prob_ablt": 0.018257399, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.019, "gain_mtut": 0},
-    {"plan_name": "紫试验品募集2h", "cost_time": 2, "prob_ablt": 0.01349131, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.025, "gain_mtut": 0},
-    {"plan_name": "紫数据收集4h", "cost_time": 4, "prob_ablt": 0.017122616, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0.2, "gain_knur": 0.05, "gain_tcur": 0.015, "gain_mtut": 0},
-    {"plan_name": "金数据收集4h", "cost_time": 4, "prob_ablt": 0.007161742, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0.2, "gain_knur": 0.05, "gain_tcur": 0.018, "gain_mtut": 0},
-    {"plan_name": "基础研究6h", "cost_time": 6, "prob_ablt": 0.047913064, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.011, "gain_mtut": 0},
-    {"plan_name": "基础研究8h", "cost_time": 8, "prob_ablt": 0.034220015, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0.06, "gain_knur": 0.014, "gain_tcur": 0.011, "gain_mtut": 0},
-    {"plan_name": "基础研究12h", "cost_time": 12, "prob_ablt": 0.008573917, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0.06, "gain_knur": 0.014, "gain_tcur": 0.011, "gain_mtut": 0},
-    {"plan_name": "研究委托3h", "cost_time": 3, "prob_ablt": 0.017450442, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.012, "gain_mtut": 0},
-    {"plan_name": "研究委托4h", "cost_time": 4, "prob_ablt": 0.013920006, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.012, "gain_mtut": 0},
-    {"plan_name": "研究委托6h", "cost_time": 6, "prob_ablt": 0.008876526, "cost_mtul": 0, "cost_mdcb": 0,
-     "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.012, "gain_mtut": 0}
-]
+    {
+        "plan_name": "魔方解析1h", "cost_time": 1, "prob_ablt": 0.116201789, "cost_mtul": 0, "cost_mdcb": 3,
+        "gain_kssr": 2.77, "gain_knur": 0.66, "gain_tcur": 0, "gain_mtut": 40
+        },
+    {
+        "plan_name": "魔方解析2h", "cost_time": 2, "prob_ablt": 0.072676553, "cost_mtul": 0, "cost_mdcb": 6,
+        "gain_kssr": 2.03, "gain_knur": 0.48, "gain_tcur": 0, "gain_mtut": 30.16
+        },
+    {
+        "plan_name": "魔方解析4h", "cost_time": 4, "prob_ablt": 0.011272179, "cost_mtul": 0, "cost_mdcb": 10,
+        "gain_kssr": 1.39, "gain_knur": 0.33, "gain_tcur": 0, "gain_mtut": 20.77
+        },
+    {
+        "plan_name": "心智补全0.5h", "cost_time": 0.5, "prob_ablt": 0.000857392, "cost_mtul": 8000,
+        "cost_mdcb": 3, "gain_kssr": 9.88, "gain_knur": 2.34, "gain_tcur": 0, "gain_mtut": 194.49
+        },
+    {
+        "plan_name": "舰装解析1h", "cost_time": 1, "prob_ablt": 0.092421779, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.042, "gain_mtut": 0
+        },
+    {
+        "plan_name": "舰装解析2h", "cost_time": 2, "prob_ablt": 0.044886976, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.042, "gain_mtut": 0
+        },
+    {
+        "plan_name": "舰装解析4h", "cost_time": 4, "prob_ablt": 0.022998271, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.042, "gain_mtut": 0
+        },
+    {
+        "plan_name": "舰装解析0.5h", "cost_time": 0.5, "prob_ablt": 0.009002613, "cost_mtul": 5000,
+        "cost_mdcb": 0, "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.693, "gain_mtut": 0
+        },
+    {
+        "plan_name": "金船定向2.5h", "cost_time": 2.5, "prob_ablt": 0.071602948, "cost_mtul": 3000,
+        "cost_mdcb": 0, "gain_kssr": 0.91, "gain_knur": 0, "gain_tcur": 0.016, "gain_mtut": 0
+        },
+    {
+        "plan_name": "金船定向5h", "cost_time": 5, "prob_ablt": 0.045716093, "cost_mtul": 5000, "cost_mdcb": 0,
+        "gain_kssr": 0.75, "gain_knur": 0, "gain_tcur": 0.011, "gain_mtut": 0
+        },
+    {
+        "plan_name": "金船定向8h", "cost_time": 8, "prob_ablt": 0.007370892, "cost_mtul": 8000, "cost_mdcb": 0,
+        "gain_kssr": 0.75, "gain_knur": 0, "gain_tcur": 0.011, "gain_mtut": 0
+        },
+    {
+        "plan_name": "金船定向0.5h", "cost_time": 0.5, "prob_ablt": 0.001076647, "cost_mtul": 5000,
+        "cost_mdcb": 5, "gain_kssr": 18, "gain_knur": 0, "gain_tcur": 0.25, "gain_mtut": 0
+        },
+    {
+        "plan_name": "彩船定向2.5h", "cost_time": 2.5, "prob_ablt": 0.047735299, "cost_mtul": 3000,
+        "cost_mdcb": 0, "gain_kssr": 0, "gain_knur": 0.61, "gain_tcur": 0.016, "gain_mtut": 0
+        },
+    {
+        "plan_name": "彩船定向5h", "cost_time": 5, "prob_ablt": 0.030477395, "cost_mtul": 5000, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0.51, "gain_tcur": 0.011, "gain_mtut": 0
+        },
+    {
+        "plan_name": "彩船定向8h", "cost_time": 8, "prob_ablt": 0.004913928, "cost_mtul": 8000, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0.51, "gain_tcur": 0.011, "gain_mtut": 0
+        },
+    {
+        "plan_name": "彩船定向0.5h", "cost_time": 0.5, "prob_ablt": 0.000717765, "cost_mtul": 5000,
+        "cost_mdcb": 5, "gain_kssr": 0, "gain_knur": 11.77, "gain_tcur": 0.25, "gain_mtut": 0
+        },
+    {
+        "plan_name": "资金募集1.5h", "cost_time": 1.5, "prob_ablt": 0.099810477, "cost_mtul": 1500,
+        "cost_mdcb": 0, "gain_kssr": 0.55, "gain_knur": 0.13, "gain_tcur": 0.018, "gain_mtut": 0
+        },
+    {
+        "plan_name": "资金募集2.5h", "cost_time": 2.5, "prob_ablt": 0.065086115, "cost_mtul": 3000,
+        "cost_mdcb": 0, "gain_kssr": 0.46, "gain_knur": 0.11, "gain_tcur": 0.014, "gain_mtut": 0
+        },
+    {
+        "plan_name": "资金募集4h", "cost_time": 4, "prob_ablt": 0.050838283, "cost_mtul": 6000, "cost_mdcb": 0,
+        "gain_kssr": 0.52, "gain_knur": 0.12, "gain_tcur": 0.03, "gain_mtut": 0
+        },
+    {
+        "plan_name": "蓝试验品募集2h", "cost_time": 2, "prob_ablt": 0.018257399, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.019, "gain_mtut": 0
+        },
+    {
+        "plan_name": "紫试验品募集2h", "cost_time": 2, "prob_ablt": 0.01349131, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.025, "gain_mtut": 0
+        },
+    {
+        "plan_name": "紫数据收集4h", "cost_time": 4, "prob_ablt": 0.017122616, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0.2, "gain_knur": 0.05, "gain_tcur": 0.015, "gain_mtut": 0
+        },
+    {
+        "plan_name": "金数据收集4h", "cost_time": 4, "prob_ablt": 0.007161742, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0.2, "gain_knur": 0.05, "gain_tcur": 0.018, "gain_mtut": 0
+        },
+    {
+        "plan_name": "基础研究6h", "cost_time": 6, "prob_ablt": 0.047913064, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.011, "gain_mtut": 0
+        },
+    {
+        "plan_name": "基础研究8h", "cost_time": 8, "prob_ablt": 0.034220015, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0.06, "gain_knur": 0.014, "gain_tcur": 0.011, "gain_mtut": 0
+        },
+    {
+        "plan_name": "基础研究12h", "cost_time": 12, "prob_ablt": 0.008573917, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0.06, "gain_knur": 0.014, "gain_tcur": 0.011, "gain_mtut": 0
+        },
+    {
+        "plan_name": "研究委托3h", "cost_time": 3, "prob_ablt": 0.017450442, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.012, "gain_mtut": 0
+        },
+    {
+        "plan_name": "研究委托4h", "cost_time": 4, "prob_ablt": 0.013920006, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.012, "gain_mtut": 0
+        },
+    {
+        "plan_name": "研究委托6h", "cost_time": 6, "prob_ablt": 0.008876526, "cost_mtul": 0, "cost_mdcb": 0,
+        "gain_kssr": 0, "gain_knur": 0, "gain_tcur": 0.012, "gain_mtut": 0
+        }
+    ]

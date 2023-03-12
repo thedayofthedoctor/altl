@@ -47,6 +47,13 @@ Accelerating library iteration.
 Litai Street, Yangling District, Shaanxi Province, China**  
 > Address: ***中国陕西省杨凌区李台街道西农路22号西北农林科技大学南校区南区14号公寓313宿舍***
 
+# What will add next
+
+> * 各类型武器CD
+> * 零散经验相关
+> * 部分战斗用计算
+> * 属性计算
+
 # Version Log
 
 ## Version Information

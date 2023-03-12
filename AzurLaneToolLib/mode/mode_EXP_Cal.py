@@ -18,10 +18,31 @@ YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
 
 Copyright (C) 2019-2023 Matt Belfast Brown
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program.  If not,
+see <http://www.gnu.org/licenses/>.
 """
+
+
+#  The software is designed to provide functions for Azur Lane Tools.
+#  Copyright (C) 2019-2023 Matt Belfast Brown
+#  Copyright (c) 2023.
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
 
 
 # define function
@@ -29,7 +50,8 @@ def fun_cexp_vrfu(flag_kstp: str, vari_leve: int) -> int:
     """
     此函数输入 <舰船类别> `flag_kstp` 与 <等级变量> `vari_leve` 得到该等级舰船 <升至下一级所需经验值> `vari_erfv`。
     数学运算公式为：int(1000 * vari_vara * vari_leve - 100 * vari_inva)
-    This function inputs <ship type> `flag_kstp` and <level variable> `vari_leve` to get the <experience value required to advance to the next level> `vari_erfv` for ships of this level.
+    This function inputs <ship type> `flag_kstp` and <level variable> `vari_leve` to get the <experience value required to
+    advance to the next level> `vari_erfv` for ships of this level.
     The mathematical formula is: int(1000 * vari_vara * vari_leve - 100 * vari_inva)
     :param flag_kstp: 标志 舰船类别 flag type of Kansen plan
     :param vari_leve: 变量 舰船等级 variable leve of Kansen
@@ -173,13 +195,18 @@ def fun_cexp_vrfu(flag_kstp: str, vari_leve: int) -> int:
 
 def fun_crex_cele(flag_kstp: str, vari_lede: int, vari_levn: int, vari_eexp: int) -> tuple[int, int]:
     """
-    计算舰船升至某级所需经验值的函数，输入如下四个变量 <舰船类别> `flag_kstp` <舰船目前等级> `vari_lede` <舰船所需等级> `vari_levn` <舰船已有经验值> `vari_eexp` 输出两个变量 <舰船总需经验值> `vari_rexp` <舰船现有总经验值> `vari_teep` 。
-    A function to calculate the experience value required for a ship to upgrade to a certain level, enter the following four variables <ship type> `flag_kstp` <ship"s current level> `vari_lede` <ship required level> `vari_levn` <ship has With experience> `vari_eexp` outputs two variables <ship total experience required> `vari_rexp` <ship existing total experience> `vari_teep`.
+    计算舰船升至某级所需经验值的函数，输入如下四个变量 <舰船类别> `flag_kstp` <舰船目前等级> `vari_lede` <舰船所需等级> `vari_levn` <舰船已有经验值> `vari_eexp` 输出两个变量
+    <舰船总需经验值> `vari_rexp` <舰船现有总经验值> `vari_teep` 。
+    A function to calculate the experience value required for a ship to upgrade to a certain level, enter the following four
+    variables <ship type> `flag_kstp` <ship"s current level> `vari_lede` <ship required level> `vari_levn` <ship has With
+    experience> `vari_eexp` outputs two variables <ship total experience required> `vari_rexp` <ship existing total
+    experience> `vari_teep`.
     :param flag_kstp: 标志 舰船类别 flag type of Kansen
     :param vari_lede: 变量 舰船目前等级 variable current level of Kansen
     :param vari_eexp: 变量 舰船已有经验值 vairable experience of Kansen
     :param vari_levn: 变量 舰船所需等级 variable required level of Kansen
-    :return: vari_rexp, vari_teep - 变量,变量 舰船总需经验值,舰船现有总经验值 variable, variable total experience required of Kansen, existing total experience of Kansen
+    :return: vari_rexp, vari_teep - 变量,变量 舰船总需经验值,舰船现有总经验值 variable, variable total experience required of Kansen,
+    existing total experience of Kansen
     """
     vari_texp = 0
     vari_teep = 0

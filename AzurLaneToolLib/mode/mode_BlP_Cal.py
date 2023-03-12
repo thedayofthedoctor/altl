@@ -18,10 +18,31 @@ YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
 
 Copyright (C) 2019-2023 Matt Belfast Brown
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program.  If not,
+see <http://www.gnu.org/licenses/>.
 """
+
+
+#  The software is designed to provide functions for Azur Lane Tools.
+#  Copyright (C) 2019-2023 Matt Belfast Brown
+#  Copyright (c) 2023.
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
 
 
 # define function list
@@ -48,7 +69,8 @@ def fun_cnbp_rqub(vari_plle: int) -> int:
 def fun_cnbp_rqup(flag_pltp: str, vari_plle: int) -> int:
     """
     此函数输入舰船科研类别与科研等级,输出升级所需蓝图数量.
-    This function inputs the research type and research level of the ship, and outputs the number of blueprints required for the upgrade.
+    This function inputs the research type and research level of the ship, and outputs the number of blueprints required for
+    the upgrade.
     :param flag_pltp: 舰船科研类别 包括 "Top Solution"(最高方案)和"Decisive Plan"(决战方案)两个参数.
     The ship research category includes  "Top Solution" and "Decisive Plan" parameters.
     :param vari_plle: 变量 科研等级 <Plan Level>
@@ -66,7 +88,8 @@ def fun_cnbp_rqup(flag_pltp: str, vari_plle: int) -> int:
 def fun_cnbp_rrcl(flag_pltp: str, vari_plde: int, vari_epbp: int, vari_lede: int, vari_levn: int) -> tuple[int, int]:
     """
     此函数输入下列五个参数输出非天运科研图纸需求数量以及已用图纸数量。
-    This function inputs the following five parameters and outputs the required quantity of non-Tianyun scientific research drawings and the quantity of used blueprints.
+    This function inputs the following five parameters and outputs the required quantity of non-Tianyun scientific research
+    drawings and the quantity of used blueprints.
     :param flag_pltp: 舰船科研类别 包括:"Top Solution"(最高方案)和"Decisive Plan"(决战方案)两个参数.
     The ship research category includes: "Top Solution" and "Decisive Plan" parameters.
     :param vari_plde: 已拥有未使用的蓝图数量. Already have the number of unused blueprints.
@@ -90,7 +113,8 @@ def fun_cnbp_rrcl(flag_pltp: str, vari_plde: int, vari_epbp: int, vari_lede: int
 def fun_cnbp_tyfi(flag_pltp: str, vari_tfdl: int, vari_tyfg: int, vari_crtf: int) -> tuple[int, int]:
     """
     此函数输入下列四个参数输出天运拟合总需蓝图数与天运拟合总用蓝图数.
-    This function inputs the following four parameters and outputs the total number of blueprints required for the fitting of the sky and the total number of blueprints used for the fitting of the sky.
+    This function inputs the following four parameters and outputs the total number of blueprints required for the fitting of
+    the sky and the total number of blueprints used for the fitting of the sky.
     :param flag_pltp: 舰船科研类别 包括:"Top Solution"(最高方案)和"Decisive Plan"(决战方案)两个参数.
     The ship research category includes: "Top Solution" and "Decisive Plan" parameters.
     :param vari_tfdl: 天运拟合现有等级. Tianyun fits existing grades.
@@ -115,8 +139,11 @@ def fun_cnbp_tyfi(flag_pltp: str, vari_tfdl: int, vari_tyfg: int, vari_crtf: int
     return vari_tbtf, vari_bpty
 
 
-def fun_cnbp_rbpt(flag_pltp: str, flag_pftf: str, vari_lede: int, vari_levn: int, vari_plde: int, vari_epbp: int, vari_tfdl: int, vari_tyfg: int,
-                  vari_crtf: int) -> list:
+def fun_cnbp_rbpt(
+        flag_pltp: str, flag_pftf: str, vari_lede: int, vari_levn: int, vari_plde: int, vari_epbp: int, vari_tfdl: int,
+        vari_tyfg: int,
+        vari_crtf: int
+        ) -> list:
     """
     此函数是集合函数，聚合上述函数内容的综合型函数.
     This function is an aggregate function, a comprehensive function that aggregates the contents of the above functions.
@@ -134,7 +161,10 @@ def fun_cnbp_rbpt(flag_pltp: str, flag_pftf: str, vari_lede: int, vari_levn: int
     :return: [vari_prbt, vari_tbpt, vari_prbp, vari_tebp, vari_tbtf,
             vari_bpty]
             列表，每项内容如下：[科研图纸需求含天运拟合,已用的总蓝图数含天运拟合,科研图纸需求计算结果,已用的总蓝图数,天运拟合总需蓝图数,天运拟合总用蓝图数]。
-            list, each of which is as follows: [Scientific research drawing requirements include Tianyun fitting, the total number of blueprints used includes Tianyun fitting, the calculation result of scientific research drawing requirements, the total number of blueprints used, the total number of blueprints required for Tianyun fitting, and the total number of Tianyun fitting number of blueprints].
+            list, each of which is as follows: [Scientific research drawing requirements include Tianyun fitting,
+            the total number of blueprints used includes Tianyun fitting, the calculation result of scientific research
+            drawing requirements, the total number of blueprints used, the total number of blueprints required for Tianyun
+            fitting, and the total number of Tianyun fitting number of blueprints].
     """
     if flag_pftf:
         vari_tbtf, vari_bpty = fun_cnbp_tyfi(flag_pltp, vari_tfdl, vari_tyfg, vari_crtf)
