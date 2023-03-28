@@ -11,7 +11,8 @@ Accelerating library iteration.</h4>
 # AzurLaneToolLib
 
 Tools lib for Azur Lane which game powered by ManJiu Shanghai.
-Accelerating library iteration.
+Accelerating library iteration.  
+***Due to changes in the game itself, this tool library will also modify the original update content.***
 
 ## Copyright Information
 
@@ -59,33 +60,37 @@ Litai Street, Yangling District, Shaanxi Province, China**
 ## Version Information
 
 > First Edition Time: 2019-07-11  
-> Last Revision Time: 2023-03-11  
-> Version Number: 0.6.3.1
+> Last Revision Time: 2023-03-28  
+> Version Number: 0.7.0
 
 ## Update Log
 
-| Release Version |    Status     |  Release Date  | Update Info                                  | 
-|----------------:|:-------------:|:--------------:|:---------------------------------------------|
-|           0.7.0 |    future     |     future     | Upgrade the compilation environment to 3.10. |
-|           0.6.4 |    working    |   2023-03-12   | Add the next scheduled module, fit for 3.11. |
-|       **0.6.3** | **available** | **2023-03-08** | **Write documents and improve information.** |
-|           0.6.2 |   available   |   2023-03-05   | Fixed some errors.                           |
-|           0.6.1 |   available   |   2023-03-05   | Add mode ` mode_ SRS_ Ptl.py`.               |
-|           0.6.0 |   available   |   2022-10-20   | Re planned version number                    |                                     |
-|         0.5.3.1 |   available   |   2022-09-13   | Update new kansen name.                      |
-|           0.5.3 |   available   |   2022-03-27   | Add and correct all comments.                |
-|           0.5.2 |   available   |   2022-03-26   | Full mode for FCS_Cal.                       |
-|           0.5.1 |   available   |   2022-02-22   | New mode and new algorithm.                  |
-|         0.5.1a2 |   available   |   2022-02-18   | Test for 0.5.1 and new md.                   |
-|          before |   available   |     before     | before                                       |
+| Release Version |    Status     |   Release Date   | Update Info                                   | 
+|----------------:|:-------------:|:----------------:|:----------------------------------------------|
+|           0.7.0 |    future     |      future      | Adapt to changes in the current game version. |
+|     ***5M3a1*** | ***working*** | ***2023-03-28*** | ***Preview version for 0.7.0***               |
+|       **0.6.3** | **available** |  **2023-03-08**  | **Write documents and improve information.**  |
+|           0.6.2 |   available   |    2023-03-05    | Fixed some errors.                            |
+|           0.6.1 |   available   |    2023-03-05    | Add mode ` mode_ SRS_ Ptl.py`.                |
+|           0.6.0 |   available   |    2022-10-20    | Re planned version number                     |                                     |
+|         0.5.3.1 |   available   |    2022-09-13    | Update new kansen name.                       |
+|           0.5.3 |   available   |    2022-03-27    | Add and correct all comments.                 |
+|           0.5.2 |   available   |    2022-03-26    | Full mode for FCS_Cal.                        |
+|           0.5.1 |   available   |    2022-02-22    | New mode and new algorithm.                   |
+|         0.5.1a2 |   available   |    2022-02-18    | Test for 0.5.1 and new md.                    |
+|          before |   available   |      before      | before                                        |
 
 ## Version Update Information
- 
+
+### 0.7.0
+
++ Adapt to changes in the current game version.
+
 ### 0.6.3
- 
-+  Write documents 
-+  Improve information 
- 
+
++ Write documents
++ Improve information
+
 ### 0.6.2
 
 + Fixed some errors

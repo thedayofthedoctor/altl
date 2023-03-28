@@ -16,7 +16,8 @@ https://pypi.org/manage/project/azurlanetoollib/releases/
 
 # Information
 
-Accelerating library iteration.
+Accelerating library iteration.  
+***Due to changes in the game itself, this tool library will also modify the original update content.***
 
 ## Proper nouns
 
@@ -65,27 +66,32 @@ Litai Street, Yangling District, Shaanxi Province, China**
 
 ### Version:
 
-   ***now**
+***now**
 
-| Release Version |    Status     |  Release Data  | Update Info                                  | 
-|----------------:|:-------------:|:--------------:|:---------------------------------------------|
-|           0.6.4 |    working    |   2023-03-12   | Add the next scheduled module, fit for 3.11. |
-|       **0.6.3** | **available** | **2023-03-08** | **Write documents and Improve information.** |
-|           0.6.2 |   available   |   2023-03-05   | Fixed some errors.                           |
-|           0.6.1 |   available   |   2023-03-05   | Add mode `mode_SRS_Ptl.py`                   |
-|           0.6.0 |   available   |   2022-10-20   | Re planned version number                    |                                     |
-|         0.5.3.1 |   available   |   2022-09-13   | Update new kansen name.                      |
-|           0.5.3 |   available   |   2022-03-27   | Add and correct all comments.                |
-|           0.5.2 |   available   |   2022-03-26   | Full mode for FCS_Cal.                       |
-|           0.5.1 |   available   |   2022-02-22   | New mode and new algorithm.                  |
-|         0.5.1α2 |   available   |   2022-02-18   | Test for 0.5.1 and new md.                   |
+| Release Version |    Status     |   Release Data   | Update Info                                  | 
+|----------------:|:-------------:|:----------------:|:---------------------------------------------|
+|     ***5M3a1*** | ***working*** | ***2023-03-28*** | ***Preview version for 0.7.0***              |
+|       **0.6.3** | **available** |  **2023-03-08**  | **Write documents and Improve information.** |
+|           0.6.2 |   available   |    2023-03-05    | Fixed some errors.                           |
+|           0.6.1 |   available   |    2023-03-05    | Add mode `mode_SRS_Ptl.py`                   |
+|           0.6.0 |   available   |    2022-10-20    | Re planned version number                    |                                     |
+|         0.5.3.1 |   available   |    2022-09-13    | Update new kansen name.                      |
+|           0.5.3 |   available   |    2022-03-27    | Add and correct all comments.                |
+|           0.5.2 |   available   |    2022-03-26    | Full mode for FCS_Cal.                       |
+|           0.5.1 |   available   |    2022-02-22    | New mode and new algorithm.                  |
+|         0.5.1α2 |   available   |    2022-02-18    | Test for 0.5.1 and new md.                   |
 
 **First Edition Time: 2019-07-11**  
-**Last Revision Time: 2023-03-11**  
-**Version Number: 0.6.3**  
-**ReadMe.md Version: 0.6.3.1**
+**Last Revision Time: 2023-03-28**  
+**Version Number: 0.7.0**  
+**ReadMe.md Version: 0.6.4**
 
 > **Version Update Log:**
+>
+>> #### 5M3a1
+>> + Preview version for 0.7.0
+>> * Adapt to changes in the current game version
+>
 >
 >> #### 0.6.3
 >> + 补充自述文件

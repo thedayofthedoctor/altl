@@ -7,8 +7,8 @@ mode_MSC.py - The core mode of the Azur Lane Tool.
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2023-03-11
-Version: 0.6.4
+Version Date: 2023-03-28
+Version: 0.7.0a1（5M3a1）
 Mode Create Date: 2023-03-11
 Mode Date: 2023-03-11
 Mode Version: 0.0.1α1
@@ -25,24 +25,6 @@ of MERCHANTABILITY or FITNESS FOR A ModeICULAR PURPOSE.  See the GNU General Pub
 You should have received a copy of the GNU General Public License along with this program.  If not,
 see <http://www.gnu.org/licenses/>.
 """
-
-
-#  The software is designed to provide functions for Azur Lane Tools.
-#  Copyright (C) 2019-2023 Matt Belfast Brown
-#  Copyright (c) 2023.
-#  This program is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
 
 
 # define import list
@@ -71,6 +53,10 @@ def fun_kexp_bcyd(numb_lvcm: int, numb_comf: int, numb_ksen: int, para_fsra: flo
 
 # 舰队综合实力
 # 结算经验值
+def fun_figt_expg(stri_succ: str, leve_emot: int, ):
+    dic_succ_leve = {"S": 1.2, "A": 1.0, "B": 0.8}
+
+
 # 演习经验值
 # 指挥官经验
 def fun_cman_expg(numb_ksen: int, stri_succ: str, numb_lvcm: int, stri_btcp: str, vari_hard: int) -> int:
