@@ -8,7 +8,7 @@ mode_KSN_Com.py - The core mode of the Azur Lane Tool.
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
 Version Date: 2023-03-28
-Version: 0.7.0a1（5M3a1）
+Version: 0.7.0a1（5M3a2）
 Mode Create Date: 2020-10-07
 Mode Date: 2023-03-04
 Mode Version: 1.1.1
@@ -36,14 +36,17 @@ def fun_ksen_nmco(vari_ksip: str) -> str:
     :return: vari_knrs - 查询结果. Search result.
     """
     if vari_ksip not in list_ksnc + list_ksnm:
+
         vari_knrs = "查找内容无效，请检验输入内容，或检查更新！"
     else:
         vari_knrs = ""
         for para_lsor in range(len(list_ksnm)):
             if vari_ksip == list_ksnm[para_lsor]:
                 vari_knrs = "舰船原名：" + vari_ksip + "，修正名称:" + list_ksnc[para_lsor]
+                break
             elif vari_ksip == list_ksnc[para_lsor]:
                 vari_knrs = "舰船原名：" + list_ksnm[para_lsor] + "，修正名称:" + vari_ksip
+                break
             else:
                 vari_knrs = "查找内容无效，请检验输入内容，或检查更新！"
     return vari_knrs
