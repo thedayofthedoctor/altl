@@ -11,8 +11,8 @@ under MIT License and `Azur Lane Chinese Wiki` (https://wiki.biligame.com/blhx/%
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2023-03-28
-Version: 0.7.0a1（5M3a1）
+Version Date: 2024-01-06
+Version: 0.6.4
 Data Create Date: 2022-10-18
 Data Version Date: 2023-03-05
 Data Version: 0.2.2
@@ -20,7 +20,7 @@ Data Version: 0.2.2
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
 
-Copyright (C) 2019-2023 Matt Belfast Brown
+Copyright (C) 2019-2024 Matt Belfast Brown
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
 published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.

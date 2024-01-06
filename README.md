@@ -32,7 +32,7 @@ Accelerating library iteration.
 
 ## LICENSE
 
-> Copyright (C) 2019 - 2023 Matt Belfast Brown
+> Copyright (C) 2019 - 2024 Matt Belfast Brown
 >
 > This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
 > License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
@@ -70,8 +70,9 @@ Litai Street, Yangling District, Shaanxi Province, China**
 
 | Release Version |    Status     |   Release Data   | Update Info                                  | 
 |----------------:|:-------------:|:----------------:|:---------------------------------------------|
-|     ***5M3a1*** | ***working*** | ***2023-03-28*** | ***Preview version for 0.7.0***              |
-|       **0.6.3** | **available** |  **2023-03-08**  | **Write documents and Improve information.** |
+|       **0.7.0** | ***working*** | ***2023-03-28*** | ***Version for 0.7.0***                      |
+|       **0.6.4** | **available** |  **2023-03-08**  | **Write documents and Improve information.** |
+|           0.6.3 |   available   |    2023-03-08    | Write documents and Improve information.     |
 |           0.6.2 |   available   |    2023-03-05    | Fixed some errors.                           |
 |           0.6.1 |   available   |    2023-03-05    | Add mode `mode_SRS_Ptl.py`                   |
 |           0.6.0 |   available   |    2022-10-20    | Re planned version number                    |                                     |
@@ -82,7 +83,7 @@ Litai Street, Yangling District, Shaanxi Province, China**
 |         0.5.1α2 |   available   |    2022-02-18    | Test for 0.5.1 and new md.                   |
 
 **First Edition Time: 2019-07-11**  
-**Last Revision Time: 2023-03-28**  
+**Last Revision Time: 2024-01-06**  
 **Version Number: 0.7.0**  
 **ReadMe.md Version: 0.6.4**
 
@@ -92,6 +93,8 @@ Litai Street, Yangling District, Shaanxi Province, China**
 >> + Preview version for 0.7.0
 >> * Adapt to changes in the current game version
 >
+>> #### 0.6.4
+>> + 补充和谐名称
 >
 >> #### 0.6.3
 >> + 补充自述文件
