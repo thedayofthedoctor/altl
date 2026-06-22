@@ -1,0 +1,128 @@
+{
+  "801": {
+    "TypeId": "801",
+    "NameChinese": "潜艇",
+    "NameChineseTraditional": "潛艇",
+    "NameEnglish": "Submarine",
+    "NameJapanese": "潜水艦",
+    "Position": "sub"
+  },
+  "881": {
+    "TypeId": "881",
+    "NameChinese": "潜母",
+    "NameChineseTraditional": "潛母",
+    "NameEnglish": "Submarine Carrier",
+    "NameJapanese": "潜水空母",
+    "Position": "sub"
+  },
+  "100": {
+    "TypeId": "100",
+    "NameChinese": "驱逐",
+    "NameChineseTraditional": "驅逐",
+    "NameEnglish": "Destroyer",
+    "NameJapanese": "駆逐",
+    "Position": "front"
+  },
+  "370": {
+    "TypeId": "370",
+    "NameChinese": "航战",
+    "NameChineseTraditional": "航戰",
+    "NameEnglish": "Battleship",
+    "NameJapanese": "航戰",
+    "Position": "back"
+  },
+  "540": {
+    "TypeId": "540",
+    "NameChinese": "运输",
+    "NameChineseTraditional": "運輸",
+    "NameEnglish": "Transport",
+    "NameJapanese": "運輸",
+    "Position": "back"
+  },
+  "140": {
+    "TypeId": "140",
+    "NameChinese": "导驱",
+    "NameChineseTraditional": "導驅",
+    "NameEnglish": "Missile Equipped Destroyer",
+    "NameJapanese": "ミサイル駆逐"
+  },
+  "210": {
+    "TypeId": "210",
+    "NameChinese": "轻巡",
+    "NameChineseTraditional": "輕巡",
+    "NameEnglish": "Light Cruiser",
+    "NameJapanese": "軽巡",
+    "Position": "front"
+  },
+  "220": {
+    "TypeId": "220",
+    "NameChinese": "重巡",
+    "NameChineseTraditional": "重巡",
+    "NameEnglish": "Heavy Cruiser",
+    "NameJapanese": "重巡",
+    "Position": "front"
+  },
+  "250": {
+    "TypeId": "250",
+    "NameChinese": "超巡",
+    "NameChineseTraditional": "超巡",
+    "NameEnglish": "Large Cruiser",
+    "NameJapanese": "超巡",
+    "Position": "front"
+  },
+  "302": {
+    "TypeId": "302",
+    "NameChinese": "战巡",
+    "NameChineseTraditional": "戰巡",
+    "NameEnglish": "Battle Cruiser",
+    "NameJapanese": "巡洋戦艦",
+    "Position": "back"
+  },
+  "300": {
+    "TypeId": "300",
+    "NameChinese": "战列",
+    "NameChineseTraditional": "戰列",
+    "NameEnglish": "Battle Ship",
+    "NameJapanese": "戦艦",
+    "Position": "back"
+  },
+  "710": {
+    "TypeId": "710",
+    "NameChinese": "轻航",
+    "NameChineseTraditional": "輕航",
+    "NameEnglish": "Light Carrier",
+    "NameJapanese": "軽空母",
+    "Position": "back"
+  },
+  "702": {
+    "TypeId": "702",
+    "NameChinese": "航母",
+    "NameChineseTraditional": "航母",
+    "NameEnglish": "Aircraft Carrier",
+    "NameJapanese": "空母",
+    "Position": "back"
+  },
+  "330": {
+    "TypeId": "330",
+    "NameChinese": "重炮",
+    "NameChineseTraditional": "重砲",
+    "NameEnglish": "Monitor",
+    "NameJapanese": "砲艦",
+    "Position": "back"
+  },
+  "510": {
+    "TypeId": "510",
+    "NameChinese": "维修",
+    "NameChineseTraditional": "維修",
+    "NameEnglish": "Repair Ship",
+    "NameJapanese": "工作",
+    "Position": "back"
+  },
+  "900": {
+    "TypeId": "900",
+    "NameChinese": "其他",
+    "NameChineseTraditional": "其他",
+    "NameEnglish": "Other",
+    "NameJapanese": "その他"
+  }
+}

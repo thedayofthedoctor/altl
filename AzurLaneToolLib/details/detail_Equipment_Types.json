@@ -1,0 +1,128 @@
+{
+  "8501": {
+    "EquipmentId": 8501,
+    "NameChinese": "驱逐炮",
+    "NameChineseTraditional": "驅逐砲",
+    "NameEnglish": "DD Gun",
+    "NameJapanese": "駆逐砲"
+  },
+  "8502": {
+    "EquipmentId": 8502,
+    "NameChinese": "轻巡炮",
+    "NameChineseTraditional": "輕巡砲",
+    "NameEnglish": "CL Gun",
+    "NameJapanese": "軽巡砲"
+  },
+  "8503": {
+    "EquipmentId": 8503,
+    "NameChinese": "重巡炮",
+    "NameChineseTraditional": "重巡砲",
+    "NameEnglish": "CA Gun",
+    "NameJapanese": "重巡砲"
+  },
+  "8504": {
+    "EquipmentId": 8504,
+    "NameChinese": "战列炮",
+    "NameChineseTraditional": "戰艦砲",
+    "NameEnglish": "BB Gun",
+    "NameJapanese": "戦艦砲"
+  },
+  "8505": {
+    "EquipmentId": 8505,
+    "NameChinese": "水面鱼雷",
+    "NameChineseTraditional": "水面魚雷",
+    "NameEnglish": "Torpedoe",
+    "NameJapanese": "魚雷"
+  },
+  "8506": {
+    "EquipmentId": 8506,
+    "NameChinese": "防空炮",
+    "NameChineseTraditional": "防空砲",
+    "NameEnglish": "Anti-Air Gun",
+    "NameJapanese": "対空砲"
+  },
+  "8507": {
+    "EquipmentId": 8507,
+    "NameChinese": "战斗机",
+    "NameChineseTraditional": "戰鬥機",
+    "NameEnglish": "Fighter",
+    "NameJapanese": "戦闘機"
+  },
+  "8508": {
+    "EquipmentId": 8508,
+    "NameChinese": "鱼雷机",
+    "NameChineseTraditional": "魚雷機",
+    "NameEnglish": "Torpedo Bomber",
+    "NameJapanese": "攻撃機"
+  },
+  "8509": {
+    "EquipmentId": 8509,
+    "NameChinese": "轰炸机",
+    "NameChineseTraditional": "轟炸機",
+    "NameEnglish": "Dive Bomber",
+    "NameJapanese": "爆撃機"
+  },
+  "8510": {
+    "EquipmentId": 8510,
+    "NameChinese": "设备",
+    "NameChineseTraditional": "設備",
+    "NameEnglish": "Auxiliary",
+    "NameJapanese": "設備"
+  },
+  "8511": {
+    "EquipmentId": 8511,
+    "NameChinese": "超巡炮",
+    "NameChineseTraditional": "超巡砲",
+    "NameEnglish": "CB Gun",
+    "NameJapanese": "超巡砲"
+  },
+  "8512": {
+    "EquipmentId": 8512,
+    "NameChinese": "水上机",
+    "NameChineseTraditional": "水上機",
+    "NameEnglish": "Seaplane",
+    "NameJapanese": "水上機"
+  },
+  "8513": {
+    "EquipmentId": 8513,
+    "NameChinese": "潜艇鱼雷",
+    "NameChineseTraditional": "潛艇用魚雷",
+    "NameEnglish": "Submarine Torpedoe",
+    "NameJapanese": "潜水艦魚雷"
+  },
+  "8514": {
+    "EquipmentId": 8514,
+    "NameChinese": "深水炸弹",
+    "NameChineseTraditional": "爆雷",
+    "NameEnglish": "Depth Charge",
+    "NameJapanese": "爆雷"
+  },
+  "8515": {
+    "EquipmentId": 8515,
+    "NameChinese": "反潜机",
+    "NameChineseTraditional": "反潛機",
+    "NameEnglish": "ASW Bomber",
+    "NameJapanese": "対潜機"
+  },
+  "8517": {
+    "EquipmentId": 8517,
+    "NameChinese": "直升机",
+    "NameChineseTraditional": "直升機",
+    "NameEnglish": "ASW Helicopter",
+    "NameJapanese": "ヘリ"
+  },
+  "8518": {
+    "EquipmentId": 8518,
+    "NameChinese": "货物",
+    "NameChineseTraditional": "貨物",
+    "NameEnglish": "Cargo",
+    "NameJapanese": "積載"
+  },
+  "8520": {
+    "EquipmentId": 8520,
+    "NameChinese": "导弹",
+    "NameChineseTraditional": "導彈",
+    "NameEnglish": "Missile",
+    "NameJapanese": "ミサイル"
+  }
+}

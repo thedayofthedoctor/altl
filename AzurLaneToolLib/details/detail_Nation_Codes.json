@@ -1,0 +1,142 @@
+{
+  "64000": {
+    "NationId": 64000,
+    "NameChinese": "其他",
+    "NameChineseTraditional": "其他",
+    "NameEnglish": "Other",
+    "NameJapanese": "その他"
+  },
+  "64001": {
+    "NationId": 64001,
+    "NameChinese": "白鹰",
+    "NameChineseTraditional": "白鷹",
+    "NameEnglish": "Eagle Union",
+    "NameJapanese": "ユニオン"
+  },
+  "64002": {
+    "NationId": 64002,
+    "NameChinese": "皇家",
+    "NameChineseTraditional": "皇家",
+    "NameEnglish": "Royal Navy",
+    "NameJapanese": "ロイヤル"
+  },
+  "64003": {
+    "NationId": 64003,
+    "NameChinese": "重樱",
+    "NameChineseTraditional": "重櫻",
+    "NameEnglish": "Sakura Empire",
+    "NameJapanese": "重桜"
+  },
+  "64004": {
+    "NationId": 64004,
+    "NameChinese": "铁血",
+    "NameChineseTraditional": "鐵血",
+    "NameEnglish": "Iron Blood",
+    "NameJapanese": "鉄血"
+  },
+  "64005": {
+    "NationId": 64005,
+    "NameChinese": "东煌",
+    "NameChineseTraditional": "東煌",
+    "NameEnglish": "Dragon Empery",
+    "NameJapanese": "東煌"
+  },
+  "64006": {
+    "NationId": 64006,
+    "NameChinese": "撒丁帝国",
+    "NameChineseTraditional": "撒丁帝國",
+    "NameEnglish": "Sardegna Empire",
+    "NameJapanese": "サディア"
+  },
+  "64007": {
+    "NationId": 64007,
+    "NameChinese": "北方联合",
+    "NameChineseTraditional": "北方聯合",
+    "NameEnglish": "Northern Parliam",
+    "NameJapanese": "北連"
+  },
+  "64008": {
+    "NationId": 64008,
+    "NameChinese": "自由鸢尾",
+    "NameChineseTraditional": "自由鳶尾",
+    "NameEnglish": "Iris Libre",
+    "NameJapanese": "アイリス"
+  },
+  "64009": {
+    "NationId": 64009,
+    "NameChinese": "维希教廷",
+    "NameChineseTraditional": "維希教廷",
+    "NameEnglish": "Vichya Dominion",
+    "NameJapanese": "ヴィシア"
+  },
+  "64099": {
+    "NationId": 64099,
+    "NameChinese": "布里",
+    "NameChineseTraditional": "布里",
+    "NameEnglish": "buli",
+    "NameJapanese": "ブイ"
+  },
+  "64100": {
+    "NationId": 64100,
+    "NameChinese": "META",
+    "NameChineseTraditional": "META",
+    "NameEnglish": "META",
+    "NameJapanese": "META"
+  },
+  "64901": {
+    "NationId": 64901,
+    "NameChinese": "海王星",
+    "NameChineseTraditional": "海王星",
+    "NameEnglish": "Neptune",
+    "NameJapanese": "海王星"
+  },
+  "64902": {
+    "NationId": 64903,
+    "NameChinese": "哔哩哔哩",
+    "NameChineseTraditional": "嗶哩嗶哩",
+    "NameEnglish": "bilibili",
+    "NameJapanese": "ビリビリ"
+  },
+  "64903": {
+    "NationId": 64903,
+    "NameChinese": "传颂之物",
+    "NameChineseTraditional": "傳頌之物",
+    "NameEnglish": "Utawarerumono",
+    "NameJapanese": "うたわれるもの"
+  },
+  "64904": {
+    "NationId": 64904,
+    "NameChinese": "绊爱",
+    "NameChineseTraditional": "絆愛",
+    "NameEnglish": "KizunaAI",
+    "NameJapanese": "絆愛"
+  },
+  "64905": {
+    "NationId": 64905,
+    "NameChinese": "hololive",
+    "NameChineseTraditional": "hololive",
+    "NameEnglish": "hololive",
+    "NameJapanese": "hololive"
+  },
+  "64906": {
+    "NationId": 64906,
+    "NameChinese": "维纳斯假期",
+    "NameChineseTraditional": "維納斯假期",
+    "NameEnglish": "Venus Vacation",
+    "NameJapanese": "アイドルマスター"
+  },
+  "64907": {
+    "NationId": 64907,
+    "NameChinese": "偶像大师",
+    "NameChineseTraditional": "偶像大師",
+    "NameEnglish": " IDOLM@STER",
+    "NameJapanese": "hololive"
+  },
+  "64908": {
+    "NationId": 64908,
+    "NameChinese": "SSSS",
+    "NameChineseTraditional": "SSSS",
+    "NameEnglish": "SSSS",
+    "NameJapanese": "SSSS"
+  }
+}

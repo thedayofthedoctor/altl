@@ -3,69 +3,60 @@
 
 """
 THIS FILE IS PART OF AZUR LANE TOOL BY MATT BELFAST BROWN
-__init__.py - The core part of the Azur Lane Tool.
+AzurLaneToolLib.__init__ — Package root exposing all public calculation functions.
 
 Author: Matt Belfast Brown
 Create Date: 2019-07-11
-Version Date: 2024-01-06
-Version: 0.6.4
+Version Date: 2026-06-21
+Version: 0.8.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
 
-Copyright (C) 2019-2024 Matt Belfast Brown
+Copyright (C) 2019-2026 Matt Belfast Brown
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
 published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
 of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with this program.  If not,
-see <http://www.gnu.org/licenses/>.
+see <https://www.gnu.org/licenses/>.
 """
 
-# import list
-import AzurLaneToolLib.data.data_AZR_Lan as data_AZR_Lan
-import AzurLaneToolLib.mode.mode_BlP_Cal as mode_BlP_Cal
-import AzurLaneToolLib.mode.mode_CME_Cal as mode_CME_Cal
-import AzurLaneToolLib.mode.mode_EXP_Cal as mode_EXP_Cal
-import AzurLaneToolLib.mode.mode_FCS_Cal as mode_FCS_Cal
-import AzurLaneToolLib.mode.mode_FLE_Tol as mode_FLE_Tol
-import AzurLaneToolLib.mode.mode_KSN_Com as mode_KSN_Com
-import AzurLaneToolLib.mode.mode_MSC_Cal as mode_MSC_Cal
-import AzurLaneToolLib.mode.mode_SRS_Ptl as mode_SRS_Ptl
+# Import all calculation modules from the modules package.
+import AzurLaneToolLib.modules.module_Blueprint_Calculator as module_Blueprint_Calculator
+import AzurLaneToolLib.modules.module_Bonus_Calculator as module_Bonus_Calculator
+import AzurLaneToolLib.modules.module_Commander_Calculator as module_Commander_Calculator
+import AzurLaneToolLib.modules.module_Experience_Calculator as module_Experience_Calculator
+import AzurLaneToolLib.modules.module_Fuel_Calculator as module_Fuel_Calculator
+import AzurLaneToolLib.modules.module_Kansen_Compare as module_Kansen_Compare
 
-# information list
+# Package metadata for distribution and identification.
 __title__ = "AzurLaneToolLib"
-__version__ = "0.6.4"
+__version__ = "0.8.0"
 __author__ = "Matt Belfast Brown"
 __license__ = "GPL-3.0"
-__copyright__ = "Copyright (c) 2020-2024 Matt Belfast Brown"
-__all__ = ["mode", "data", "data_AZR_Lan", "mode_BlP_Cal", "mode_CME_Cal", "mode_EXP_Cal", "mode_FCS_Cal",
-           "mode_FLE_Tol", "mode_MSC_Cal", "mode_KSN_Com", "mode_SRS_Ptl"]
+__copyright__ = "Copyright (c) 2019-2026 Matt Belfast Brown"
+__all__ = ["modules", "details", "module_Blueprint_Calculator", "module_Bonus_Calculator",
+           "module_Commander_Calculator", "module_Experience_Calculator",
+           "module_Fuel_Calculator", "module_Kansen_Compare"]
 
-# class list
-FitCal = mode_SRS_Ptl.FitCal
-KsenKeyGen = mode_SRS_Ptl.KsenKeyGen
-
-# function list
-fun_cnbp_rbpt = mode_BlP_Cal.fun_cnbp_rbpt
-fun_cnbp_rqub = mode_BlP_Cal.fun_cnbp_rqub
-fun_cnbp_rqup = mode_BlP_Cal.fun_cnbp_rqup
-fun_cnbp_rrcl = mode_BlP_Cal.fun_cnbp_rrcl
-fun_cnbp_tyfi = mode_BlP_Cal.fun_cnbp_tyfi
-fun_berf_cmug = mode_CME_Cal.fun_berf_cmug
-fun_evdb_cmul = mode_CME_Cal.fun_evdb_cmul
-fun_cexp_vrfu = mode_EXP_Cal.fun_cexp_vrfu
-fun_crex_cele = mode_EXP_Cal.fun_crex_cele
-fun_bsdg_fuca = mode_FCS_Cal.fun_bsdg_fuca
-fun_kstp_scco = mode_FCS_Cal.fun_kstp_scco
-fun_sfks_fuca = mode_FCS_Cal.fun_sfks_fuca
-fun_subd_fuco = mode_FCS_Cal.fun_subd_fuco
-fun_maks_code = mode_FLE_Tol.fun_maks_code
-fun_ksen_nmco = mode_KSN_Com.fun_ksen_nmco
-fun_gain_valu = mode_SRS_Ptl.fun_gain_valu
-fun_anel_algr = mode_SRS_Ptl.fun_anel_algr
-fun_mkmt_data = mode_SRS_Ptl.fun_mkmt_data
-
-# data list
-dic_ksen_data = data_AZR_Lan.dic_ksen_data
+# Expose public functions from the Blueprint Calculator module.
+fun_cnbp_rbpt = module_Blueprint_Calculator.calculate_blueprint_summary
+fun_cnbp_rqub = module_Blueprint_Calculator.calculate_base_blueprints
+fun_cnbp_rqup = module_Blueprint_Calculator.calculate_plan_blueprints
+fun_cnbp_rrcl = module_Blueprint_Calculator.calculate_blueprint_total
+fun_cnbp_tyfi = module_Blueprint_Calculator.calculate_fortune_fitting
+# Expose public functions from the Commander Calculator module.
+fun_berf_cmug = module_Commander_Calculator.calculate_required_experience
+fun_evdb_cmul = module_Commander_Calculator.calculate_level_multiplier
+# Expose public functions from the Experience Calculator module.
+fun_cexp_vrfu = module_Experience_Calculator.calculate_level_experience
+fun_crex_cele = module_Experience_Calculator.calculate_ship_total
+# Expose public functions from the Fuel Calculator module.
+fun_bsdg_fuca = module_Fuel_Calculator.calculate_base_consumption
+fun_kstp_scco = module_Fuel_Calculator.lookup_special_correction
+fun_sfks_fuca = module_Fuel_Calculator.calculate_surface_consumption
+fun_subd_fuco = module_Fuel_Calculator.calculate_submarine_fuel
+# Expose public functions from the Kansen Compare module.
+fun_ksen_nmco = module_Kansen_Compare.lookup_harmonized_name

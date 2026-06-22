@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AzurLaneToolLib"
+version = "0.8.0"
+description = "Tools lib for Azur Lane which game powered by ManJiu Shanghai"
+authors = [
+    { name = "Matt Belfast Brown", email = "thedayofthedo@gmail.com" },
+]
+license = "GPL-3.0"
+readme = "README.md"
+requires-python = ">=3.9,<=3.14"
+keywords = ["pip", "azur_lane", "tool"]
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "lzstring",
+]
+
+[project.urls]
+Documentation = "http://belfast.web3v.work/program/doc/altl/"
+"Bug Tracker" = "https://github.com/thedayofthedoctor/altl/issues"
+Repository = "https://github.com/thedayofthedoctor/altl"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+AzurLaneToolLib = ["details/*.json"]

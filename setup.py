@@ -8,8 +8,8 @@ setup.py - The core part of the Azur Lane Tool.
 Author: Matt Belfast Brown
 E-mail: thedayofthedo@gmail.com
 Create Date: 2019-07-11
-Version Date: 2024-01-06
-Version: 0.6.4
+Version Date: 2026-06-21
+Version: 0.8.0
 
 THIS PROGRAM IS FREE FOR EVERYONE,IS LICENSED UNDER GPL-3.0
 YOU SHOULD HAVE RECEIVED A COPY OF GPL-3.0 LICENSE.
@@ -31,7 +31,7 @@ with open("Descriptiption.md", "r", encoding="utf-8") as dest_pimd:
 
 setup(
         name="AzurLaneToolLib",
-        version="0.6.4",
+        version="0.8.0",
 
         author="Matt Belfast Brown",
         author_email="thedayofthedo@gmail.com",
@@ -49,25 +49,22 @@ setup(
             },
 
         packages=find_packages(),
-        py_modules=["AzurLaneToolLib.__init__", "AzurLaneToolLib.mode.__init__", "AzurLaneToolLib.data.__init__",
-                    "AzurLaneToolLib.mode.mode_BlP_Cal", "AzurLaneToolLib.mode.mode_CME_Cal",
-                    "AzurLaneToolLib.mode.mode_EXP_Cal", "AzurLaneToolLib.mode.mode_FCS_Cal",
-                    "AzurLaneToolLib.mode.mode_FLE_Tol", "AzurLaneToolLib.mode.mode_KSN_Com",
-                    "AzurLaneToolLib.mode.mode_MSC_Cal", "AzurlaneToolLib.mode.mode_SRS_Ptl",
-                    "AzurLAneToolLib.data.data_AZR_Lan"],
         include_package_data=True,
+        package_data={
+            "AzurLaneToolLib.details": ["*.json"],
+        },
         zip_safe=True,
 
         classifiers=[
-            "Programming Language :: Python :: 3.7",
-            "Programming Language :: Python :: 3.8",
             "Programming Language :: Python :: 3.9",
             "Programming Language :: Python :: 3.10",
             "Programming Language :: Python :: 3.11",
             "Programming Language :: Python :: 3.12",
+            "Programming Language :: Python :: 3.13",
+            "Programming Language :: Python :: 3.14",
             "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
             ],
         platforms="any",
         install_requires=["lzstring"],
-        python_requires=">=3.7,<=3.12"
+        python_requires=">=3.9,<=3.14"
         )

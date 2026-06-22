@@ -1,0 +1,37 @@
+{
+  "6": {
+    "RarityId": 6,
+    "NameChinese": "海上传奇",
+    "NameChineseTraditional": "海上傳奇",
+    "NameEnglish": "Ultra Rare",
+    "NameJapanese": "UR"
+  },
+  "5": {
+    "RarityId": 5,
+    "NameChinese": "超稀有",
+    "NameChineseTraditional": "超稀有",
+    "NameEnglish": "SuperRare",
+    "NameJapanese": "SSR"
+  },
+  "4": {
+    "RarityId": 4,
+    "NameChinese": "精锐",
+    "NameChineseTraditional": "精銳",
+    "NameEnglish": "Elite",
+    "NameJapanese": "SR"
+  },
+  "3": {
+    "RarityId": 3,
+    "NameChinese": "稀有",
+    "NameChineseTraditional": "稀有",
+    "NameEnglish": "Rare",
+    "NameJapanese": "R"
+  },
+  "2": {
+    "RarityId": 2,
+    "NameChinese": "普通",
+    "NameChineseTraditional": "普通",
+    "NameEnglish": "Normal",
+    "NameJapanese": "N"
+  }
+}

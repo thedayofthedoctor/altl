@@ -2,7 +2,7 @@
 <h4 align="center">Tools lib for Azur Lane which game powered by ManJiu Shanghai.
 Accelerating library iteration.</h4>
 <p  align="center">
-<a href="https://pypi.org/manage/project/AzurLaneToolLib/release/0.6.2/"><img src="https://img.shields.io/pypi/v/azurlanetoollib"></a>
+<a href="https://pypi.org/manage/project/AzurLaneToolLib/release/0.8.0/"><img src="https://img.shields.io/pypi/v/azurlanetoollib"></a>
 <a href="https://www.gnu.org/licenses/quick-guide-gplv3.zh-cn.html"><img src="https://img.shields.io/pypi/l/azurlanetoollib?color=green"></a>
 <img src="https://img.shields.io/pypi/dd/azurlanetoollib?color=yellow">
 </p>
@@ -32,7 +32,7 @@ Accelerating library iteration.
 
 ## LICENSE
 
-> Copyright (C) 2019 - 2024 Matt Belfast Brown
+> Copyright (C) 2019 - 2026 Matt Belfast Brown
 >
 > This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
 > License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
@@ -70,6 +70,7 @@ Litai Street, Yangling District, Shaanxi Province, China**
 
 | Release Version |    Status     |   Release Data   | Update Info                                  | 
 |----------------:|:-------------:|:----------------:|:---------------------------------------------|
+|       **0.8.0** | ***working*** | ***2026-06-21*** | ***Restructured project, JSON data, pyproject.toml, CLASP-3.1 preparation.*** |
 |       **0.7.0** | ***working*** | ***2023-03-28*** | ***Version for 0.7.0***                      |
 |       **0.6.4** | **available** |  **2023-03-08**  | **Write documents and Improve information.** |
 |           0.6.3 |   available   |    2023-03-08    | Write documents and Improve information.     |
@@ -83,11 +84,26 @@ Litai Street, Yangling District, Shaanxi Province, China**
 |         0.5.1α2 |   available   |    2022-02-18    | Test for 0.5.1 and new md.                   |
 
 **First Edition Time: 2019-07-11**  
-**Last Revision Time: 2024-01-06**  
-**Version Number: 0.7.0**  
-**ReadMe.md Version: 0.6.4**
+**Last Revision Time: 2026-06-21**  
+**Version Number: 0.8.0**  
+**ReadMe.md Version: 0.8.0**
 
 > **Version Update Log:**
+>
+>> #### 0.8.0
+>> + Renamed `mode/` directory to `modules/`, all `mode_*.py` to `module_*.py` with Pascal_Snake naming.
+>> + Replaced `data/data_AZR_Lan.py` with `details/detail_*.json` (5 JSON files, PascalCase keys).
+>> + Removed deprecated modules: `mode_SRS_Ptl.py`, `module_Fleet_Tool.py`.
+>> + Added `pyproject.toml` with modern build configuration.
+>> + Raised Python requirement to `>=3.9,<=3.14`.
+>> + Switched to `importlib.resources.files()` for package data access.
+>> + CLASP-3.1 compliance: all modules renamed, abbreviated names replaced, line-by-line comments added.
+>> + Renamed `module_Commander_Calculate` → `module_Commander_Calculator`.
+>> + Renamed `module_Experience_Calculate` → `module_Experience_Calculator`.
+>> + Renamed `module_Fuel_Consumption_Calculate` → `module_Fuel_Calculator`.
+>> + Renamed `module_Blueprint_Calculate` → `module_Blueprint_Calculator`.
+>> + Renamed `module_Miscellaneous_Calculate` → `module_Bonus_Calculator`.
+>> + Created `DetailLoader` class with lazy-loading JSON data access.
 >
 >> #### 5M3a1
 >> + Preview version for 0.7.0
