@@ -99,13 +99,7 @@ def calculate_plan_blueprints(plan_type: str, plan_level: int) -> int:
     return required_blueprints
 
 
-def calculate_blueprint_total(
-        plan_type: str,
-        owned_blueprints: int,
-        level_used: int,
-        target_level: int,
-        current_level: int
-) -> tuple[int, int]:
+def calculate_blueprint_total(plan_type: str, owned_blueprints: int, level_used: int, target_level: int, current_level: int) -> tuple[int, int]:
     """
     Calculate the total blueprints required and used for non-fortune research progress.
 
@@ -145,12 +139,7 @@ def calculate_blueprint_total(
     return still_needed, total_used
 
 
-def calculate_fortune_fitting(
-        plan_type: str,
-        fortune_level: int,
-        fortune_blueprints: int,
-        fortune_experience: int
-) -> tuple[int, int]:
+def calculate_fortune_fitting(plan_type: str, fortune_level: int, fortune_blueprints: int, fortune_experience: int) -> tuple[int, int]:
     """
     Calculate the total blueprints required and used for fortune (Tianyun) fitting.
 
@@ -198,17 +187,7 @@ def calculate_fortune_fitting(
     return fortune_needed, fitting_used
 
 
-def calculate_blueprint_summary(
-        plan_type: str,
-        has_fortune: str,
-        target_level: int,
-        current_level: int,
-        owned_blueprints: int,
-        level_used: int,
-        fortune_level: int,
-        fortune_blueprints: int,
-        fortune_experience: int
-) -> list:
+def calculate_blueprint_summary(plan_type: str, has_fortune: str, target_level: int, current_level: int, owned_blueprints: int, level_used: int, fortune_level: int, fortune_blueprints: int, fortune_experience: int) -> list:
     """
     Aggregate all blueprint calculations into a single summary list.
 
@@ -240,9 +219,7 @@ def calculate_blueprint_summary(
     # Check whether fortune fitting should be included in the aggregate calculation.
     if has_fortune:
         # Compute fortune fitting requirements when the flag is enabled.
-        fortune_needed, fitting_used = calculate_fortune_fitting(
-            plan_type, fortune_level, fortune_blueprints, fortune_experience
-        )
+        fortune_needed, fitting_used = calculate_fortune_fitting(plan_type, fortune_level, fortune_blueprints, fortune_experience)
     # Fortune fitting is not requested; initialize the fortune values to zero.
     else:
         # Set both fortune counters to zero to exclude them from the total.

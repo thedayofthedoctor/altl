@@ -27,6 +27,7 @@ see <https://www.gnu.org/licenses/>.
 
 # Define the list of original Japanese, American, and other ship names before harmonization.
 original_names = [
+    # Begin the list of original Japanese ship names with the first group of entries.
     "电", "岚", "响", "晓", "涟", "雷", "潮", "霞", "曙", "三笠", "三隈", "土佐", "大山", "大井",
     # Continue the list entries on the following line.
     "大凤", "大和", "大淀", "大潮", "大鲸", "山风", "山城", "千岁", "川内", "夕云", "夕立", "夕凪",
@@ -89,6 +90,7 @@ original_names = [
 
 # Define the list of harmonized replacement names corresponding positionally to original_names.
 harmonized_names = [
+    # Begin the list of harmonized replacement names with the first group of entries.
     "柏", "萍", "栀", "枫", "槿", "梓", "槟", "蕸", "棪", "鲐", "狻", "䲠", "鳝", "獾", "鹩",
     # Continue the list entries on the following line.
     "鲸", "淀", "荙", "迖", "杣", "鲼", "鹂", "貆", "茭", "椿", "枳", "狐", "棭", "龙", "鸱",
