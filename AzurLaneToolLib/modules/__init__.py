@@ -23,11 +23,19 @@ You should have received a copy of the GNU General Public License along with thi
 see <https://www.gnu.org/licenses/>.
 """
 
+# Expose the subpackage title string for introspection and distribution metadata.
 __title__ = "AzurLaneToolLib.modules"
+# Expose the subpackage version string for introspection and distribution metadata.
 __version__ = "0.8.0"
+# Expose the author name string for introspection and distribution metadata.
 __author__ = "Matt Belfast Brown"
+# Expose the license identifier string for introspection and distribution metadata.
 __license__ = "GPL-3.0"
+# Expose the copyright string for introspection and distribution metadata.
 __copyright__ = "Copyright (c) 2019-2026 Matt Belfast Brown"
+# Declare the set of public module names this subpackage exposes for wildcard imports.
 __all__ = ["module_Blueprint_Calculator", "module_Bonus_Calculator",
+           # Continue the public API list with the remaining module identifiers.
            "module_Commander_Calculator", "module_Experience_Calculator",
+           # Continue the public API list with the final pair of module identifier strings.
            "module_Fuel_Calculator", "module_Kansen_Compare"]

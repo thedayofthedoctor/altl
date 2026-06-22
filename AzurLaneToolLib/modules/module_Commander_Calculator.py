@@ -51,7 +51,7 @@ def calculate_level_multiplier(commander_level: int) -> int:
     elif 51 <= commander_level <= 70:
         # Apply integer division by two for this bracket range.
         level_multiplier = (commander_level + 1) // 2
-    # Check if the commander is in the mid bracket from 71 through 90.
+    # Check if the commander is in the mid-bracket from 71 through 90.
     elif 71 <= commander_level <= 90:
         # Return the level plus one directly for this bracket range.
         level_multiplier = commander_level + 1
