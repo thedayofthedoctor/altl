@@ -66,7 +66,8 @@ class DetailLoader:
         # Initialize the ship data cache to None for lazy loading on first access.
         self.cache_ships = None
 
-    def _init_load_json_file_function_(self, resource_name):
+    @staticmethod
+    def _init_load_json_file_function_(resource_name):
         """
         Open and parse a bundled JSON detail file from the details package.
 

@@ -26,7 +26,7 @@ see <https://www.gnu.org/licenses/>.
 # Import the setuptools packaging utilities for building and distributing the package.
 from setuptools import find_packages, setup
 
-# Open the long description markdown file for inclusion in the package metadata.
+# Open the long description Markdown file for inclusion in the package metadata.
 with open("Descriptiption.md", "r", encoding="utf-8") as description_file:
     # Read the full content of the description file into a string variable.
     long_description = description_file.read()
@@ -47,9 +47,9 @@ setup(
 
         # Provide a short one-line summary of the package purpose for PyPI display.
         description="Tools lib for Azur Lane which game powered by ManJiu Shanghai",
-        # Assign the pre-read long description content from the markdown file.
+        # Assign the pre-read long description content from the Markdown file.
         long_description=long_description,
-        # Declare the content type of the long description as GitHub-flavored markdown.
+        # Declare the content type of the long description as GitHub-flavored Markdown.
         long_description_content_type="text/markdown",
         # List search keywords to help users discover the package on the index.
         keywords=["pip", "azur_lane", "tool"],
@@ -78,7 +78,7 @@ setup(
         # Indicate that the package can be safely installed as a zip archive.
         zip_safe=True,
 
-        # List the trove classifiers for the Python package index categorisation.
+        # List the trove classifiers for the Python package index categorization.
         classifiers=[
             # Declare compatibility with Python version 3.9.
             "Programming Language :: Python :: 3.9",

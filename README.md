@@ -22,7 +22,7 @@ Accelerating library iteration.
 ## Proper nouns
 
 **Kinetics Artifactual Navy Self-fegulative En-lore Node**
--> ***KANSEN*** -> ***舰船（艦船）***
+→ ***KANSEN*** → ***舰船（艦船）***
 
 動力学人工海上作戦機構·自律行動型伝承接続端子 -> 艦船(*KanSen*)
 

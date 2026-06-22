@@ -135,7 +135,7 @@ def calculate_base_consumption(ship_type: str, ship_rarity: str, ship_name: str)
         rarity_index = 3
     # Check for Ultra Rare or Decisive Plan rarity labels.
     elif ship_rarity in ["海上传奇", "决战方案"]:
-        # Ultra rare and Decisive Plan share the fifth and highest tier index.
+        # Ultrarare and Decisive Plan share the fifth and highest tier index.
         rarity_index = 4
     # The rarity label is unrecognized; default to the lowest tier.
     else:

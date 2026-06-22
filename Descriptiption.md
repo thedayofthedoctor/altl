@@ -125,7 +125,7 @@ Litai Street, Yangling District, Shaanxi Province, China**
 
 ### 0.6.0
 
-+ Re planned version number
++ Re-planned version number
 + Revised ship data
 + New Data File ` data_AZR_Lan.py`
 + Delete Original Data ` data_FLE_Shi.py`
